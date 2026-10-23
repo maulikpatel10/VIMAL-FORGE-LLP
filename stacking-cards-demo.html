@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sticky Stacking Cards Scroll Demo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-primary: #0F172A;
+      --color-secondary: #1E293B;
+      --color-accent: #F47A35;
+      --color-accent-hover: #D75A1E;
+      --color-bg-dark: #080c14;
+      --color-bg-card: rgba(15, 23, 42, 0.65);
+      --font-heading: "Outfit", sans-serif;
+      --font-body: "Inter", sans-serif;
+      --border-radius-lg: 24px;
+      --border-radius-md: 12px;
+      --shadow-premium: 0 20px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--color-bg-dark);
+      color: #fff;
+      font-family: var(--font-body);
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: var(--font-heading);
+      font-weight: 700;
+    }
+
+    /* Demo Header */
+    .demo-header {
+      min-height: 70vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 4rem 2rem;
+      text-align: center;
+      background: radial-gradient(circle at center, #111b2d 0%, var(--color-bg-dark) 80%);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      position: relative;
+    }
+
+    .demo-header::before {
+      content: '';
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(244, 122, 53, 0.1) 0%, transparent 70%);
+      filter: blur(50px);
+      top: 10%;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .tagline {
+      color: var(--color-accent);
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      z-index: 1;
+    }
+
+    .title {
+      font-size: 3rem;
+      max-width: 900px;
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+      z-index: 1;
+    }
+
+    .desc {
+      color: #94a3b8;
+      max-width: 650px;
+      font-size: 1.1rem;
+      margin-bottom: 2.5rem;
+      z-index: 1;
+    }
+
+    .scroll-btn {
+      background: var(--color-accent);
+      color: var(--color-primary);
+      padding: 0.9rem 2rem;
+      font-family: var(--font-heading);
+      font-weight: 600;
+      border: 2px solid var(--color-accent);
+      border-radius: 6px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      z-index: 1;
+    }
+
+    .scroll-btn:hover {
+      background: transparent;
+      color: var(--color-accent);
+    }
+
+    /* Section divider & Titles */
+    .section-title-bar {
+      padding: 6rem 2rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .section-title-bar h2 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .section-title-bar p {
+      color: #94a3b8;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Card Details Structure */
+    .card-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 3rem;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+    }
+
+    .card-media {
+      width: 100%;
+      height: 380px;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .card-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .card-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .card-index {
+      color: rgba(255, 255, 255, 0.15);
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 0.2rem;
+    }
+
+    .card-tag {
+      color: var(--color-accent);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .card-title {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #fff;
+    }
+
+    .card-desc {
+      color: #cbd5e1;
+      font-size: 0.95rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .specs-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .spec-item {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      padding: 0.8rem 1rem;
+      border-radius: 8px;
+    }
+
+    .spec-label {
+      font-size: 0.65rem;
+      color: var(--color-accent);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 700;
+      margin-bottom: 0.2rem;
+      display: block;
+    }
+
+    .spec-value {
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    /* =========================================================
+       DEMO 1: PURE CSS STICKY STACKING
+       ========================================================= */
+    .css-stack-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem 2rem 10rem;
+    }
+
+    .css-stack-card {
+      position: sticky;
+      background: var(--color-bg-card);
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: var(--border-radius-lg);
+      padding: 3rem;
+      margin-bottom: 4rem;
+      box-shadow: var(--shadow-premium);
+      transform-origin: center top;
+      /* Subtle scale drop as we scroll down (supported in newer browsers natively, or basic overlap) */
+    }
+
+    /* Stack offsets so they don't cover completely but slide underneath with an offset */
+    .css-stack-card:nth-child(1) { top: 12vh; }
+    .css-stack-card:nth-child(2) { top: 15vh; }
+    .css-stack-card:nth-child(3) { top: 18vh; }
+    .css-stack-card:nth-child(4) { top: 21vh; }
+    .css-stack-card:nth-child(5) { top: 24vh; }
+
+
+    /* =========================================================
+       DEMO 2: GSAP 3D DEPTH STACK & SCALE
+       ========================================================= */
+    .gsap-showcase-section {
+      position: relative;
+      height: 100vh;
+      width: 100%;
+      overflow: hidden;
+      background: #06090f;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .gsap-section-header {
+      position: absolute;
+      top: 3.5rem;
+      left: 8%;
+      z-index: 10;
+      max-width: 700px;
+    }
+
+    .gsap-section-header h2 {
+      font-size: 2.2rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .gsap-section-header p {
+      color: #94a3b8;
+      font-size: 0.95rem;
+    }
+
+    .gsap-cards-container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .gsap-stack-card {
+      position: absolute;
+      width: 84%;
+      max-width: 1100px;
+      background: var(--color-bg-card);
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: var(--border-radius-lg);
+      padding: 3.5rem;
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+      transform-origin: center center;
+      will-change: transform, opacity;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    /* Footer spacers */
+    .demo-footer {
+      min-height: 40vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 4rem;
+      background-color: #06090f;
+    }
+
+    .demo-footer h3 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .demo-footer p {
+      color: #94a3b8;
+      max-width: 500px;
+      margin-bottom: 2rem;
+    }
+
+    @media (max-width: 991px) {
+      .card-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      .card-media {
+        height: 250px;
+      }
+      .css-stack-card, .gsap-stack-card {
+        padding: 2rem;
+      }
+      .gsap-showcase-section {
+        height: auto;
+        padding-top: 8rem;
+        padding-bottom: 4rem;
+      }
+      .gsap-cards-container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        position: relative;
+        height: auto;
+      }
+      .gsap-stack-card {
+        position: relative;
+        width: 92%;
+        top: auto;
+        left: auto;
+        transform: none !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+      }
+      .gsap-section-header {
+        position: relative;
+        top: auto;
+        left: auto;
+        padding: 0 4% 2rem 4%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Demo Header -->
+  <div class="demo-header">
+    <span class="tagline">Interactive Concept Preview</span>
+    <h1 class="title">Sticky Stacking Cards Scroll Effects</h1>
+    <p class="desc">
+      Explore the two main scrolling concepts for the "Equipment & Infrastructure" section.
+      Scroll down to experience how they behave in real-time.
+    </p>
+    <a href="#css-demo" class="scroll-btn">Scroll to Preview</a>
+  </div>
+
+  <!-- DEMO 1: PURE CSS STICKY STACKING -->
+  <div id="css-demo" class="section-title-bar">
+    <span class="tagline">Concept A — Pure CSS</span>
+    <h2>1. Pure CSS Sticky Stacking</h2>
+    <p>
+      Cards stack on top of each other using native <code>position: sticky</code>. As you scroll, 
+      each card locks at the top with a cumulative offset, creating a stack of tabs.
+    </p>
+  </div>
+
+  <div class="css-stack-container">
+    <!-- Card 1 -->
+    <div class="css-stack-card">
+      <div class="card-grid">
+        <div class="card-info">
+          <span class="card-index">01 / 05</span>
+          <span class="card-tag">NDT Testing & Metrology</span>
+          <h3 class="card-title">Laboratory</h3>
+          <p class="card-desc">In-house metallurgical testing lab auditing raw alloy bars and forged components. Employs advanced spectrometers and NDT systems to secure zero steel defects.</p>
+          <div class="specs-grid">
+            <div class="spec-item"><span class="spec-label">Spectrometer</span><span class="spec-value">GNR Italy OES</span></div>
+            <div class="spec-item"><span class="spec-label">MPI Setup</span><span class="spec-value">Mayuresh 400mm Wet</span></div>
+          </div>
+        </div>
+        <div class="card-media">
+          <img src="https://vimalsteelforge.com/wp-content/uploads/2024/10/leb-1.jpg" alt="Laboratory">
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="css-stack-card">
+      <div class="card-grid">
+        <div class="card-info">
+          <span class="card-index">02 / 05</span>
+          <span class="card-tag">CAD/CAM Tooling Development</span>
+          <h3 class="card-title">Die Shop</h3>
+          <p class="card-desc">Precision die design and tooling manufacturing workshop. Translates SolidWorks CAD files directly into hardened hot-forging die sets using multi-axis CNC milling.</p>
+          <div class="specs-grid">
+            <div class="spec-item"><span class="spec-label">VMC Tooling</span><span class="spec-value">Haas 3YT CNC Mill</span></div>
+            <div class="spec-item"><span class="spec-label">Shot Blasting</span><span class="spec-value">Harikrishna scale blast</span></div>
+          </div>
+        </div>
+        <div class="card-media">
+          <img src="https://vimalsteelforge.com/wp-content/uploads/2024/10/dai-shop-2.jpg" alt="Die Shop">
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="css-stack-card">
+      <div class="card-grid">
+        <div class="card-info">
+          <span class="card-index">03 / 05</span>
+          <span class="card-tag">Hot Forming Operations</span>
+          <h3 class="card-title">Forge Shop</h3>
+          <p class="card-desc">High-speed CNC radial-axial ring rolling and closed die friction press hot forging. Creates structural components with continuous grain flow profiles.</p>
+          <div class="specs-grid">
+            <div class="spec-item"><span class="spec-label">Ring Rolling</span><span class="spec-value">AJIT 500/300 CNC Lines</span></div>
+            <div class="spec-item"><span class="spec-label">Drop Hammer</span><span class="spec-value">Rattan 1.5T Drop</span></div>
+          </div>
+        </div>
+        <div class="card-media">
+          <img src="https://vimalsteelforge.com/wp-content/uploads/2024/10/forge-shop-2.jpg" alt="Forge Shop">
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="css-stack-card">
+      <div class="card-grid">
+        <div class="card-info">
+          <span class="card-index">04 / 05</span>
+          <span class="card-tag">Heat Treatment</span>
+          <h3 class="card-title">Furnace</h3>
+          <p class="card-desc">Advanced batch thermal annealing ovens and induction pre-heaters. Restores alloy steel microstructure parameters to secure optimal machinability.</p>
+          <div class="specs-grid">
+            <div class="spec-item"><span class="spec-label">Annealing</span><span class="spec-value">Axiom 3-Ton Normalizing</span></div>
+            <div class="spec-item"><span class="spec-label">Induction</span><span class="spec-value">Plasma 250KVA & 350KVA</span></div>
+          </div>
+        </div>
+        <div class="card-media">
+          <img src="https://vimalsteelforge.com/wp-content/uploads/2024/10/annealing--scaled.jpg" alt="Furnace">
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="css-stack-card">
+      <div class="card-grid">
+        <div class="card-info">
+          <span class="card-index">05 / 05</span>
+          <span class="card-tag">Precision Finish Machining</span>
+          <h3 class="card-title">CNC Machine Workshop</h3>
+          <p class="card-desc">Advanced finishing turning workshop operating multi-axis CNC lathes and milling centers. Delivers final tolerance controls within precise micron parameters.</p>
+          <div class="specs-grid">
+            <div class="spec-item"><span class="spec-label">CNC Lathes</span><span class="spec-value">300mm Finish Turn</span></div>
+            <div class="spec-item"><span class="spec-label">VMC Mill</span><span class="spec-value">Haas 2YT CNC VMC</span></div>
+          </div>
+        </div>
+        <div class="card-media">
+          <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=600&auto=format&fit=crop" alt="CNC Workshop">
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- DEMO 2: GSAP 3D DEPTH STACK & SCALE -->
+  <div id="gsap-demo" class="gsap-showcase-section">
+    <div class="gsap-section-header">
+      <span class="tagline">Concept B — GSAP Premium</span>
+      <h2>2. GSAP 3D Depth Stack &amp; Scale</h2>
+      <p>Scroll down inside this section. Cards overlap precisely and older cards shrink, fade and move back in 3D space.</p>
+    </div>
+
+    <div class="gsap-cards-container">
+      <!-- Card 1 -->
+      <div class="gsap-stack-card">
+        <div class="card-grid">
+          <div class="card-info">
+            <span class="card-index">01 / 05</span>
+            <span class="card-tag">NDT Testing & Metrology</span>
+            <h3 class="card-title">Laboratory</h3>
+            <p class="card-desc">In-house metallurgical testing lab auditing raw alloy bars and forged components. Employs advanced spectrometers and NDT systems to secure zero steel defects.</p>
+            <div class="specs-grid">
+              <div class="spec-item"><span class="spec-label">Spectrometer</span><span class="spec-value">GNR Italy OES</span></div>
+              <div class="spec-item"><span class="spec-label">MPI Setup</span><span class="spec-value">Mayuresh 400mm Wet</span></div>
+            </div>
+          </div>
+          <div class="card-media">
+            <img src="https://vimalsteelforge.com/wp-content/uploads/2024/10/leb-1.jpg" alt="Laboratory">
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="gsap-stack-card">
+        <div class="card-grid">
+          <div class="card-info">
+            <span class="card-index">02 / 05</span>
+            <span class="card-tag">CAD/CAM Tooling Development</span>
+            <h3 class="card-title">Die Shop</h3>
+            <p class="card-desc">Precision die design and tooling manufacturing workshop. Translates SolidWorks CAD files directly into hardened hot-forging die sets using multi-axis CNC milling.</p>
+            <div class="specs-grid">
+              <div class="spec-item"><span class="spec-label">VMC Tooling</span><span class="spec-value">Haas 3YT CNC Mill</span></div>
+              <div class="spec-item"><span class="spec-label">Shot Blasting</span><span class="spec-value">Harikrishna scale blast</span></div>
+            </div>
+          </div>
+          <div class="card-media">
+            <img src="https://vimalsteelforge.com/wp-content/uploads/2024/10/dai-shop-2.jpg" alt="Die Shop">
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="gsap-stack-card">
+        <div class="card-grid">
+          <div class="card-info">
+            <span class="card-index">03 / 05</span>
+            <span class="card-tag">Hot Forming Operations</span>
+            <h3 class="card-title">Forge Shop</h3>
+            <p class="card-desc">High-speed CNC radial-axial ring rolling and closed die friction press hot forging. Creates structural components with continuous grain flow profiles.</p>
+            <div class="specs-grid">
+              <div class="spec-item"><span class="spec-label">Ring Rolling</span><span class="spec-value">AJIT 500/300 CNC Lines</span></div>
+              <div class="spec-item"><span class="spec-label">Drop Hammer</span><span class="spec-value">Rattan 1.5T Drop</span></div>
+            </div>
+          </div>
+          <div class="card-media">
+            <img src="https://vimalsteelforge.com/wp-content/uploads/2024/10/forge-shop-2.jpg" alt="Forge Shop">
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="gsap-stack-card">
+        <div class="card-grid">
+          <div class="card-info">
+            <span class="card-index">04 / 05</span>
+            <span class="card-tag">Heat Treatment</span>
+            <h3 class="card-title">Furnace</h3>
+            <p class="card-desc">Advanced batch thermal annealing ovens and induction pre-heaters. Restores alloy steel microstructure parameters to secure optimal machinability.</p>
+            <div class="specs-grid">
+              <div class="spec-item"><span class="spec-label">Annealing</span><span class="spec-value">Axiom 3-Ton Normalizing</span></div>
+              <div class="spec-item"><span class="spec-label">Induction</span><span class="spec-value">Plasma 250KVA & 350KVA</span></div>
+            </div>
+          </div>
+          <div class="card-media">
+            <img src="https://vimalsteelforge.com/wp-content/uploads/2024/10/annealing--scaled.jpg" alt="Furnace">
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="gsap-stack-card">
+        <div class="card-grid">
+          <div class="card-info">
+            <span class="card-index">05 / 05</span>
+            <span class="card-tag">Precision Finish Machining</span>
+            <h3 class="card-title">CNC Machine Workshop</h3>
+            <p class="card-desc">Advanced finishing turning workshop operating multi-axis CNC lathes and milling centers. Delivers final tolerance controls within precise micron parameters.</p>
+            <div class="specs-grid">
+              <div class="spec-item"><span class="spec-label">CNC Lathes</span><span class="spec-value">300mm Finish Turn</span></div>
+              <div class="spec-item"><span class="spec-label">VMC Mill</span><span class="spec-value">Haas 2YT CNC VMC</span></div>
+            </div>
+          </div>
+          <div class="card-media">
+            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=600&auto=format&fit=crop" alt="CNC Workshop">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Demo Footer -->
+  <div class="demo-footer">
+    <h3>Which Scroll Style Do You Prefer?</h3>
+    <p>Both styles have unique advantages. CSS is simpler and works flawlessly across mobile and desktop. GSAP provides a modern 3D deck-of-cards depth effect.</p>
+    <a href="#" class="scroll-btn" onclick="window.scrollTo({top:0, behavior:'smooth'}); return false;">Scroll to Top</a>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      if (!window.gsap || !window.ScrollTrigger) return;
+      gsap.registerPlugin(ScrollTrigger);
+
+      // We only run the GSAP pinning/stacking scroll effect on screens wider than mobile
+      const mm = gsap.matchMedia();
+
+      mm.add("(min-width: 992px)", () => {
+        const cards = gsap.utils.toArray('.gsap-stack-card');
+        const container = document.querySelector('.gsap-cards-container');
+        const section = document.getElementById('gsap-demo');
+
+        // Initial setup for the GSAP cards
+        // Card 1 starts active (centered, full scale, fully opaque)
+        // Card 2-5 start translated down, slightly smaller, and completely invisible/hidden
+        gsap.set(cards, { y: 200, scale: 0.9, opacity: 0, autoAlpha: 0 });
+        gsap.set(cards[0], { y: 0, scale: 1, opacity: 1, autoAlpha: 1 });
+
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: section,
+            start: 'top top',
+            end: '+=400%', // 400% height of scroll triggers
+            pin: true,
+            scrub: 1,
+            invalidateOnRefresh: true
+          }
+        });
+
+        // Hold the first card active for a little bit of scrolling
+        tl.to({}, { duration: 0.5 });
+
+        // Loop through and transition each card
+        cards.forEach((card, index) => {
+          if (index === 0) return;
+
+          // Target previous cards to scale down and shift backwards in depth
+          const activeIndex = index;
+          
+          tl.to(cards.slice(0, activeIndex), {
+            scale: (i) => 1 - (activeIndex - i) * 0.05, // Card 0 becomes 0.9, Card 1 becomes 0.95
+            yPercent: (i) => -(activeIndex - i) * 8,   // Shift up slightly
+            opacity: (i) => 1 - (activeIndex - i) * 0.25, // Dim transparency
+            duration: 1,
+            ease: 'power1.out'
+          }, `slide-${index}`)
+          
+          // Animate the current card sliding up and locking on top
+          .fromTo(card, {
+            y: 800,
+            scale: 0.9,
+            opacity: 0,
+            autoAlpha: 0
+          }, {
+            y: 0,
+            scale: 1,
+            opacity: 1,
+            autoAlpha: 1,
+            duration: 1,
+            ease: 'power2.out'
+          }, `slide-${index}`)
+          
+          // Hold the current layout state for a brief scroll segment
+          .to({}, { duration: 0.5 });
+        });
+
+        return () => {
+          // Cleanup on resize
+          gsap.set(cards, { clearProps: "all" });
+        };
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Engineering & Manufacturing Capabilities | Vimal Forge LLP</title>
+  <meta name="description"
+    content="Explore Vimal Forge LLP's integrated manufacturing capabilities: Seamless Ring Rolling, Closed Die Forging, Precision CNC/VMC Machining, Tool Room design, and Material Traceability.">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/motion.css">
+</head>
+
+<body class="section-bg-dark">
+  <div id="page-content">
+
+    <!-- Header Component -->
+    <include src="components/header.html"></include>
+
+    <!-- Sticky Dot Sub-Navigation -->
+    <div class="sticky-dot-nav" aria-label="Section navigation">
+      <div class="dot-nav-item active" data-target="hero" data-label="Hero"></div>
+      <div class="dot-nav-item" data-target="ecosystem" data-label="Explorer"></div>
+      <div class="dot-nav-item" data-target="equipment" data-label="Equipment"></div>
+      <div class="dot-nav-item" data-target="stats" data-label="Capacity Stats"></div>
+      <div class="dot-nav-item" data-target="quality" data-label="Quality Control"></div>
+      <div class="dot-nav-item" data-target="media-wall" data-label="Media Wall"></div>
+      <div class="dot-nav-item" data-target="rfq" data-label="Request RFQ"></div>
+    </div>
+
+    <!-- SECTION 1: HERO -->
+    <section id="hero" class="hero" style="padding: 0; min-height: 100vh;">
+      <div class="video-bg-container">
+        <video class="video-bg-elem" autoplay loop muted playsinline poster="/assets/images/about_story_factory.png">
+          <source src="/assets/videos/hero_loop.webm" type="video/webm">
+          <source src="/assets/videos/hero_loop.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="hero-overlay" style="background: rgba(15, 23, 42, 0.82);"></div>
+      <div class="hero-container" style="padding-top: 120px; z-index: 5;">
+        <div class="hero-content">
+          <span class="hero-tagline" style="color: var(--color-accent);">OUR CAPABILITIES</span>
+          <h1 class="hero-title" style="font-size: 3.8rem; line-height: 1.1; margin-bottom: 1.5rem;">Integrated Ring
+            Rolling, Forging & Precision Machining Solutions</h1>
+          <p class="hero-subtitle" style="font-size: 1.3rem; max-width: 680px; margin-bottom: 3rem;">Trusted Global
+            Manufacturing Partner for Bearings, Automotive, Hydraulics, and Energy OEMs Since 2009.</p>
+          <div class="hero-ctas">
+            <a href="#ecosystem" class="btn btn-primary">Explore Facilities</a>
+            <a href="/rfq.html" class="btn btn-secondary">Request RFQ</a>
+          </div>
+        </div>
+      </div>
+      <!-- Scroll Mouse Indicator -->
+      <div class="hero-scroll-indicator">
+        <span>SCROLL DOWN</span>
+        <div class="scroll-mouse">
+          <div class="scroll-wheel"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: MANUFACTURING ECOSYSTEM -->
+    <section id="ecosystem" style="background: #080c14; border-top: 1px solid rgba(255,255,255,0.05);">
+      <div class="section-container">
+        <div class="section-header cap-reveal">
+          <span class="section-tagline">Integrated Operations</span>
+          <h2 class="section-title" style="color: #fff;">Manufacturing Ecosystem</h2>
+        </div>
+
+        <div class="grid-2" style="align-items: center; gap: 4rem;">
+          <!-- Interactive Nodes List -->
+          <div class="visualizer-controls cap-reveal-left" id="eco-nodes-container">
+            <div class="cap-spec-item eco-node-btn active" data-eco="ring-rolling"
+              style="padding: 1.5rem; cursor: pointer;">
+              <span class="cap-spec-value">01. Ring Rolling</span>
+              <p style="font-size:0.9rem; color: #94a3b8; margin-top: 0.3rem;">High-speed seamless rolled rings with
+                optimal grain flow structure.</p>
+            </div>
+            <div class="cap-spec-item eco-node-btn" data-eco="forging" style="padding: 1.5rem; cursor: pointer;">
+              <span class="cap-spec-value">02. Forging</span>
+              <p style="font-size:0.9rem; color: #94a3b8; margin-top: 0.3rem;">Friction screw press and belt-drop hammer
+                lines for high structural integrity.</p>
+            </div>
+            <div class="cap-spec-item eco-node-btn" data-eco="machining" style="padding: 1.5rem; cursor: pointer;">
+              <span class="cap-spec-value">03. Machining</span>
+              <p style="font-size:0.9rem; color: #94a3b8; margin-top: 0.3rem;">Precision turning and milling within
+                tight micron tolerances for finish parts.</p>
+            </div>
+            <div class="cap-spec-item eco-node-btn" data-eco="inspection" style="padding: 1.5rem; cursor: pointer;">
+              <span class="cap-spec-value">04. Quality Lab</span>
+              <p style="font-size:0.9rem; color: #94a3b8; margin-top: 0.3rem;">NDT, spectrometer, and metrology systems
+                ensuring zero defects.</p>
+            </div>
+            <div class="cap-spec-item eco-node-btn" data-eco="packaging" style="padding: 1.5rem; cursor: pointer;">
+              <span class="cap-spec-value">05. Packaging</span>
+              <p style="font-size:0.9rem; color: #94a3b8; margin-top: 0.3rem;">Heat-treated box stuffings, moisture
+                barriers, and cargo protection.</p>
+            </div>
+          </div>
+
+          <!-- Dynamic Media Display Card -->
+          <div
+            style="background: rgba(15,23,42,0.8); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--border-radius-lg); padding: 2rem; position: relative; overflow: hidden; height: 680px;"
+            id="eco-detail-card">
+            <div
+              style="height: 280px; width: 500px; border-radius: var(--border-radius-md); overflow: hidden; position: relative;">
+              <video id="eco-video" autoplay loop muted playsinline
+                style="width: 100%; height: 100%; object-fit: cover;">
+                <source src="/assets/videos/ring_rolling_loop.webm" type="video/webm">
+                <source src="/assets/videos/ring_rolling_loop.mp4" type="video/mp4">
+              </video>
+              <div
+                style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(15, 23, 42, 0.9), transparent);">
+              </div>
+            </div>
+            <div style="margin-top: 1.5rem;">
+              <h3 id="eco-title" style="color: #fff; font-size: 1.8rem; margin-bottom: 0.5rem;">Ring Rolling Facility
+              </h3>
+              <p id="eco-desc" style="color: #94a3b8; font-size: 0.98rem; line-height: 1.5; margin-bottom: 1.5rem;">
+                Equipped with automatic radial-axial CNC ring rolling machines. Suitable for bearing race and planetary
+                transmission blanks.</p>
+              <div class="grid-2" style="gap: 1rem; margin-top: 1rem;">
+                <div class="cap-spec-item" style="padding: 0.8rem 1rem;">
+                  <span class="cap-spec-label">Equipment</span>
+                  <span class="cap-spec-value" id="eco-equipment">AJIT 500mm &amp; 300mm CNC lines</span>
+                </div>
+                <div class="cap-spec-item" style="padding: 0.8rem 1rem;">
+                  <span class="cap-spec-label">Capacity</span>
+                  <span class="cap-spec-value" id="eco-capacity">Outer Diameter: 50 mm to 450 mm</span>
+                </div>
+                <div class="cap-spec-item" style="padding: 0.8rem 1rem;">
+                  <span class="cap-spec-label">Applications</span>
+                  <span class="cap-spec-value" id="eco-applications">Bearings &amp; Gear Rings</span>
+                </div>
+                <div class="cap-spec-item" style="padding: 0.8rem 1rem;">
+                  <span class="cap-spec-label">Technical Details</span>
+                  <span class="cap-spec-value" id="eco-details">Radial-axial grain flow control</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section divider -->
+    <div class="cap-section-divider"></div>
+
+    <!-- SECTION 3: EQUIPMENT & INFRASTRUCTURE (SCROLL-DRIVEN SHOWCASE) -->
+    <section id="equipment" class="equipment-showcase-section">
+
+      <!-- Pinned Slide container -->
+      <div class="equipment-slides-container">
+
+        <!-- Sticky/Fixed Header inside the container -->
+        <div class="equipment-section-header">
+          <span class="section-tagline">Factory Infrastructure</span>
+          <h2 class="section-title">Equipment &amp; Infrastructure</h2>
+          <p class="section-subtitle">Integrated Manufacturing Infrastructure Supporting Ring Rolling, Forging,
+            Machining
+            and Quality Assurance.</p>
+        </div>
+
+        <!-- Department 1: Laboratory -->
+        <div class="equipment-slide" data-dept="laboratory">
+          <div class="equipment-slide-grid">
+            <!-- Left Side (Details Card) -->
+            <div class="equipment-slide-info">
+              <span class="dept-index">01</span>
+              <span class="dept-tag">NDT Testing &amp; Metrology</span>
+              <h3 class="dept-title">Laboratory</h3>
+              <p class="dept-desc">In-house metallurgical testing lab auditing raw alloy bars and forged components.
+                Employs advanced spectrometers and NDT systems to secure zero steel defects.</p>
+
+              <div class="dept-specs-grid">
+                <div class="spec-item">
+                  <span class="spec-label">Spectrometer</span>
+                  <span class="spec-value">GNR Italy OES</span>
+                  <span class="spec-qty">Qty: 1</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-label">MPI Setup</span>
+                  <span class="spec-value">Mayuresh 400mm Wet</span>
+                  <span class="spec-qty">Qty: 1</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-label">Ultrasonic Testing</span>
+                  <span class="spec-value">Blowhole Detection</span>
+                  <span class="spec-qty">Qty: 1</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-label">Hardness Tester</span>
+                  <span class="spec-value">FEI Brinell Machine</span>
+                  <span class="spec-qty">Qty: 1</span>
+                </div>
+              </div>
+            </div>
+            <!-- Right Side (Facility Image) -->
+            <div class="equipment-slide-media">
+              <img src="https://vimalsteelforge.com/wp-content/uploads/2024/10/leb-1.jpg" alt="Laboratory"
+                class="dept-image">
+            </div>
+          </div>
+        </div>
+
+        <!-- Department 2: Die Shop -->
+        <div class="equipment-slide" data-dept="die-shop">
+          <div class="equipment-slide-grid">
+            <!-- Left Side (Details Card) -->
+            <div class="equipment-slide-info">
+              <span class="dept-index">02</span>
+              <span class="dept-tag">CAD/CAM Tooling Development</span>
+              <h3 class="dept-title">Die Shop</h3>
+              <p class="dept-desc">Precision die design and tooling manufacturing workshop. Translates SolidWorks CAD
+                files directly into hardened hot-forging die sets using multi-axis CNC milling.</p>
+
+              <div class="dept-specs-grid">
+                <div class="spec-item">
+                  <span class="spec-label">VMC Tooling</span>
+                  <span class="spec-value">Haas 3YT CNC Mill</span>
+                  <span class="spec-qty">Qty: 1</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-label">Shot Blasting</span>
+                  <span class="spec-value">Harikrishna Scale Blast</span>
+                  <span class="spec-qty">Capacity: 1 T/H</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-label">Tool Room</span>
+                  <span class="spec-value">Anil Lathes &amp; MAS Drills</span>
+                  <span class="spec-qty">Full Setup</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-label">Design CAD/CAM</span>
+                  <span class="spec-value">SolidWorks 3D Modeling</span>
+                  <span class="spec-qty">CAD/CAM Station</span>
+                </div>
+              </div>
+            </div>
+            <!-- Right Side (Facility Image) -->
+            <div class="equipment-slide-media">
+              <img src="https://vimalsteelforge.com/wp-content/uploads/2024/10/dai-shop-2.jpg" alt="Die Shop"
+                class="dept-image">
+            </div>
+          </div>
+        </div>
+
+        <!-- Department 3: Forge Shop -->
+        <div class="equipment-slide" data-dept="forge-shop">
+          <div class="equipment-slide-grid">
+            <!-- Left Side (Details Card) -->
+            <div class="equipment-slide-info">
+              <span class="dept-index">03</span>
+              <span class="dept-tag">Hot Forming Operations</span>
+              <h3 class="dept-title">Forge Shop</h3>
+              <p class="dept-desc">High-speed CNC radial-axial ring rolling and closed die friction press hot forging.
+                Creates structural components with continuous grain flow profiles.</p>
+
+              <div class="dept-specs-grid">
+                <div class="spec-item">
+                  <span class="spec-label">Ring Rolling</span>
+                  <span class="spec-value">AJIT 500/300 CNC Lines</span>
+                  <span class="spec-qty">Qty: 2 Lines</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-label">Drop Hammer</span>
+                  <span class="spec-value">Rattan 1.5T Drop</span>
+                  <span class="spec-qty">Qty: 1</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-label">Friction Press</span>
+                  <span class="spec-value">Dharam 400T Press</span>
+                  <span class="spec-qty">Qty: 1</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-label">Trimming Press</span>
+                  <span class="spec-value">Amrit 250T/100T Power</span>
+                  <span class="spec-qty">Qty: 2</span>
+                </div>
+              </div>
+            </div>
+            <!-- Right Side (Facility Image) -->
+            <div class="equipment-slide-media">
+              <img src="https://vimalsteelforge.com/wp-content/uploads/2024/10/forge-shop-2.jpg" alt="Forge Shop"
+                class="dept-image">
+            </div>
+          </div>
+        </div>
+
+        <!-- Department 4: Furnace -->
+        <div class="equipment-slide" data-dept="furnace">
+          <div class="equipment-slide-grid">
+            <!-- Left Side (Details Card) -->
+            <div class="equipment-slide-info">
+              <span class="dept-index">04</span>
+              <span class="dept-tag">Heat Treatment &amp; billet Pre-heating</span>
+              <h3 class="dept-title">Furnace</h3>
+              <p class="dept-desc">Advanced batch thermal annealing ovens and high-capacity induction pre-heaters.
+                Restores alloy steel microstructure parameters to secure optimal machinability.</p>
+
+              <div class="dept-specs-grid">
+                <div class="spec-item">
+                  <span class="spec-label">Annealing</span>
+                  <span class="spec-value">Axiom 3-Ton Normalizing</span>
+                  <span class="spec-qty">Qty: 3 Units</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-label">Pusher Furnace</span>
+                  <span class="spec-value">Oil-Fired Pusher 350 kg/hr</span>
+                  <span class="spec-qty">Qty: 1</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-label">Induction</span>
+                  <span class="spec-value">Plasma 250KVA &amp; 350KVA</span>
+                  <span class="spec-qty">Qty: 2</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-label">Temp Control</span>
+                  <span class="spec-value">Digital Pyrometer Tracking</span>
+                  <span class="spec-qty">Smart Setup</span>
+                </div>
+              </div>
+            </div>
+            <!-- Right Side (Facility Image) -->
+            <div class="equipment-slide-media">
+              <img src="https://vimalsteelforge.com/wp-content/uploads/2024/10/annealing--scaled.jpg" alt="Furnace"
+                class="dept-image">
+            </div>
+          </div>
+        </div>
+
+        <!-- Department 5: CNC Machine Workshop -->
+        <div class="equipment-slide" data-dept="cnc-workshop">
+          <div class="equipment-slide-grid">
+            <!-- Left Side (Details Card) -->
+            <div class="equipment-slide-info">
+              <span class="dept-index">05</span>
+              <span class="dept-tag">Precision Finish Machining</span>
+              <h3 class="dept-title">CNC Machine Workshop</h3>
+              <p class="dept-desc">Advanced finishing turning workshop operating multi-axis CNC lathes and milling
+                centers. Delivers final tolerance controls within precise micron parameters.</p>
+
+              <div class="dept-specs-grid">
+                <div class="spec-item">
+                  <span class="spec-label">CNC Lathes</span>
+                  <span class="spec-value">300mm Finish Turn Lathes</span>
+                  <span class="spec-qty">Qty: 24 Units</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-label">VMC Mill</span>
+                  <span class="spec-value">Haas 2YT CNC VMC</span>
+                  <span class="spec-qty">Qty: 1 Unit</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-label">Laser Marker</span>
+                  <span class="spec-value">SLTL Laser Marking</span>
+                  <span class="spec-qty">Qty: 1 Unit</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-label">Scope</span>
+                  <span class="spec-value">OD up to 300mm (+/-10μm)</span>
+                  <span class="spec-qty">Precision Range</span>
+                </div>
+              </div>
+            </div>
+            <!-- Right Side (Facility Image) -->
+            <div class="equipment-slide-media">
+              <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=600&auto=format&fit=crop"
+                alt="CNC Workshop" class="dept-image">
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Section divider -->
+    <div class="cap-section-divider"></div>
+
+    <!-- SECTION 4: CAPACITY STATISTICS -->
+    <section id="stats" style="background: #060a12; border-top: 1px solid rgba(255,255,255,0.05);">
+      <div class="section-container">
+        <div class="section-header cap-reveal">
+          <span class="section-tagline">By the numbers</span>
+          <h2 class="section-title" style="color: #fff; display: inline-block;">Manufacturing Capacity Statistics</h2>
+        </div>
+
+        <div class="overview-stats" style="margin-top: 2rem;">
+          <div class="stat-card"
+            style="background: linear-gradient(135deg, rgba(15,23,42,0.95) 0%, rgba(8,12,22,1) 100%); border: 1px solid rgba(255,255,255,0.07); border-top: 3px solid var(--color-accent);">
+            <div class="stat-num" style="color: #fff;"><span class="counter-val" data-target="450">0</span>mm</div>
+            <div class="stat-label" style="color: #94a3b8;">Max Ring Outer Diameter</div>
+          </div>
+          <div class="stat-card"
+            style="background: linear-gradient(135deg, rgba(15,23,42,0.95) 0%, rgba(8,12,22,1) 100%); border: 1px solid rgba(255,255,255,0.07); border-top: 3px solid var(--color-accent);">
+            <div class="stat-num" style="color: #fff;"><span class="counter-val" data-target="20">0</span>kg</div>
+            <div class="stat-label" style="color: #94a3b8;">Max Component Weight</div>
+          </div>
+          <div class="stat-card"
+            style="background: linear-gradient(135deg, rgba(15,23,42,0.95) 0%, rgba(8,12,22,1) 100%); border: 1px solid rgba(255,255,255,0.07); border-top: 3px solid var(--color-accent);">
+            <div class="stat-num" style="color: #fff;"><span class="counter-val" data-target="400">0</span>T</div>
+            <div class="stat-label" style="color: #94a3b8;">Friction Press Capacity</div>
+          </div>
+          <div class="stat-card"
+            style="background: linear-gradient(135deg, rgba(15,23,42,0.95) 0%, rgba(8,12,22,1) 100%); border: 1px solid rgba(255,255,255,0.07); border-top: 3px solid var(--color-accent);">
+            <div class="stat-num" style="color: #fff;"><span class="counter-val" data-target="24">0</span>+</div>
+            <div class="stat-label" style="color: #94a3b8;">CNC Lathe Lines</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section divider -->
+    <div class="cap-section-divider"></div>
+
+    <!-- SECTION 5: QUALITY CONTROL SYSTEMS -->
+    <section id="quality" style="background: #080c14; border-top: 1px solid rgba(255,255,255,0.05);">
+      <div class="section-container">
+        <div class="grid-2" style="align-items: center; gap: 4rem;">
+          <div class="cap-reveal-left">
+            <span class="quality-cert-badge">✓ ISO 9001:2015 Certified</span>
+            <span class="section-tagline">Quality Control Systems</span>
+            <h2 class="section-title" style="color: #fff;">NDT Testing &amp; Metrology Lab</h2>
+            <p style="color: #94a3b8; margin-top: 1.5rem; line-height: 1.65; margin-bottom: 2rem;">Vimal Forge LLP
+              controls components under ISO 9001:2015 procedures. Our in-house testing laboratory features Italian
+              chemical spectrometers, magnetic particle inspection, ultrasonic sound checking, and hardness devices to
+              eliminate any steel structure defects.</p>
+            <div class="grid-2" style="gap: 1.5rem;">
+              <div class="cap-spec-item">
+                <span class="cap-spec-label">Chemical Spectrometer</span>
+                <span class="cap-spec-value">GNR Italy (OES)</span>
+              </div>
+              <div class="cap-spec-item">
+                <span class="cap-spec-label">Ultrasonic (UT)</span>
+                <span class="cap-spec-value">Blowhole detection</span>
+              </div>
+              <div class="cap-spec-item">
+                <span class="cap-spec-label">Crack Check (MPI)</span>
+                <span class="cap-spec-value">Mayuresh 400mm wet</span>
+              </div>
+              <div class="cap-spec-item">
+                <span class="cap-spec-label">Traceability</span>
+                <span class="cap-spec-value">Heat Code stamp</span>
+              </div>
+            </div>
+          </div>
+          <div class="cap-reveal-right">
+            <div class="quality-img-wrap">
+              <img src="https://vimalsteelforge.com/wp-content/uploads/2024/10/leb-1.jpg" alt="Metrology Lab">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section divider -->
+    <div class="cap-section-divider"></div>
+
+
+    <!-- SECTION 7: RFQ CTA -->
+    <section id="rfq" class="hero"
+      style="padding: 6rem 2rem; min-height: auto; border-top: 1px solid rgba(255,255,255,0.05);">
+      <div class="video-bg-container">
+        <video class="video-bg-elem" autoplay loop muted playsinline poster="/assets/images/about_story_factory.png">
+          <source src="/assets/videos/hero_loop.webm" type="video/webm">
+          <source src="/assets/videos/hero_loop.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="hero-overlay" style="background: rgba(15, 23, 42, 0.88);"></div>
+      <div class="section-container" style="z-index: 5; width: 100%;">
+        <div class="grid-2" style="align-items: center; gap: 4rem;">
+          <div>
+            <span class="section-tagline">Get Sourcing Quotes</span>
+            <h2 class="section-title" style="color: #fff;">Need a Reliable Manufacturing Partner?</h2>
+            <p style="color: #cbd5e1; margin-top: 1.5rem; line-height: 1.6; margin-bottom: 2rem;">Upload your technical
+              drawings and parameter sheets. Our sales coordinators will analyze specifications and respond with
+              estimates within 24 hours.</p>
+            <div class="hero-ctas">
+              <a href="tel:+919979777787" class="btn btn-primary">Call Sourcing Team</a>
+              <a href="mailto:info@vimalsteelforge.com" class="btn btn-secondary">Email Drawings</a>
+            </div>
+          </div>
+
+          <!-- Quick RFQ Form Widget on page -->
+          <div
+            style="background-color: rgba(10, 15, 28, 0.85); padding: 3rem; border-radius: var(--border-radius-lg); box-shadow: var(--shadow-premium); border: 1px solid rgba(255,255,255,0.08); backdrop-filter: blur(10px);">
+            <h3 class="mb-1" style="color: #fff;">Quick RFQ Request</h3>
+            <p class="mb-2" style="font-size:0.9rem; color:#94a3b8;">Upload your engineering drawings for immediate
+              lead-time estimates.</p>
+
+            <div id="rfq-success" class="rfq-success-message" style="display:none; text-align:center; padding: 2rem;">
+              <div style="font-size: 3rem; color: #2e7d32; margin-bottom: 1rem;">✓</div>
+              <h4 style="color: #fff;">RFQ Received!</h4>
+              <p style="font-size:0.9rem; color:#94a3b8;">Thank you. We will contact you with pricing within 48 business
+                hours.</p>
+            </div>
+
+            <form id="rfq-main-form" class="rfq-form">
+              <div class="form-group" style="margin-bottom: 1rem;">
+                <label for="rfq-name"
+                  style="color: #94a3b8; font-size: 0.85rem; display:block; margin-bottom:0.3rem;">Full Name *</label>
+                <input type="text" id="rfq-name" name="name" required placeholder="John Doe"
+                  style="width:100%; padding: 0.8rem; background: rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.1); border-radius:4px; color:#fff;">
+              </div>
+              <div class="form-group" style="margin-bottom: 1rem;">
+                <label for="rfq-email"
+                  style="color: #94a3b8; font-size: 0.85rem; display:block; margin-bottom:0.3rem;">Business Email
+                  *</label>
+                <input type="email" id="rfq-email" name="email" required placeholder="sourcing@company.com"
+                  style="width:100%; padding: 0.8rem; background: rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.1); border-radius:4px; color:#fff;">
+              </div>
+              <div class="form-group" style="margin-bottom: 1rem;">
+                <label for="rfq-quantity"
+                  style="color: #94a3b8; font-size: 0.85rem; display:block; margin-bottom:0.3rem;">Target Quantity
+                  *</label>
+                <input type="text" id="rfq-quantity" name="quantity" required placeholder="e.g. 5,000 pcs/year"
+                  style="width:100%; padding: 0.8rem; background: rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.1); border-radius:4px; color:#fff;">
+              </div>
+              <div class="form-group" style="margin-bottom: 1.5rem;">
+                <label style="color: #94a3b8; font-size: 0.85rem; display:block; margin-bottom:0.3rem;">Upload Drawing
+                  (PDF/STEP) *</label>
+                <div class="drawing-upload-box" id="drawing-upload-zone"
+                  style="padding: 1.5rem; border: 2px dashed rgba(255,255,255,0.15); border-radius:4px; text-align:center; cursor:pointer; background: rgba(255,255,255,0.01);">
+                  <p style="font-size:0.85rem; color:#94a3b8;">Click to select file</p>
+                  <input type="file" id="rfq-file-input" name="drawings" required style="display:none;"
+                    accept=".pdf,.step,.stp,.dwg,.png,.jpg">
+                </div>
+                <div id="file-list-display"
+                  style="margin-top:0.5rem; font-size:0.8rem; font-weight:600; color:var(--color-accent);"></div>
+              </div>
+              <button type="submit" class="btn btn-primary" style="width:100%;">Submit RFQ Request</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Component -->
+    <include src="components/footer.html"></include>
+
+  </div> <!-- end #page-content -->
+
+  <!-- Sticky Overlays -->
+  <div class="sticky-widgets-container">
+    <a href="https://wa.me/919979777787?text=Hi%20Vimal%20Forge,%20we%20have%20an%20RFQ%20inquiry."
+      class="floating-btn floating-whatsapp" target="_blank" rel="noopener noreferrer"
+      aria-label="Chat on WhatsApp">💬</a>
+    <a href="/rfq.html" class="floating-btn floating-rfq" aria-label="Request Quotation">RFQ</a>
+  </div>
+  <div class="mobile-call-bar">
+    <a href="tel:+919979777787">📞 Call Sourcing Manager (+91 99797 77787)</a>
+  </div>
+
+  <!-- Immersive Motion Design Engines -->
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script type="module" src="/js/motion.js"></script>
+  <script type="module" src="/js/main.js"></script>
+
+  <!-- Capabilities Page — Premium GSAP Scroll Animations -->
+  <script>
+    window.addEventListener('load', function () {
+      if (!window.gsap || !window.ScrollTrigger) return;
+      gsap.registerPlugin(ScrollTrigger);
+
+      /* ── CSS-class reveals (cap-reveal, cap-reveal-left, cap-reveal-right) ── */
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+      document.querySelectorAll('.cap-reveal, .cap-reveal-left, .cap-reveal-right').forEach(el => io.observe(el));
+
+      /* ── Stat cards — stagger entrance via GSAP (fromTo ensures final state is always visible) ── */
+      const statCards = document.querySelectorAll('#stats .stat-card');
+      if (statCards.length) {
+        gsap.fromTo(statCards,
+          { y: 50, opacity: 0 },
+          {
+            y: 0,
+            opacity: 1,
+            duration: 0.75,
+            stagger: 0.1,
+            ease: 'power3.out',
+            scrollTrigger: {
+              trigger: '#stats',
+              start: 'top 78%',
+              once: true
+            }
+          }
+        );
+      }
+
+      /* ── Ecosystem detail card — slide in from right ── */
+      const ecoCard = document.getElementById('eco-detail-card');
+      if (ecoCard) {
+        gsap.fromTo(ecoCard,
+          { x: 60, opacity: 0 },
+          {
+            x: 0,
+            opacity: 1,
+            duration: 0.9,
+            ease: 'power3.out',
+            scrollTrigger: {
+              trigger: '#ecosystem',
+              start: 'top 70%',
+              once: true
+            }
+          }
+        );
+      }
+
+      /* ── Media wall items — stagger fade-up ── */
+      const mediaItems = document.querySelectorAll('.media-masonry-item');
+      if (mediaItems.length) {
+        gsap.fromTo(mediaItems,
+          { y: 40, opacity: 0 },
+          {
+            y: 0,
+            opacity: 1,
+            duration: 0.65,
+            stagger: 0.08,
+            ease: 'power3.out',
+            scrollTrigger: {
+              trigger: '#media-wall',
+              start: 'top 75%',
+              once: true
+            }
+          }
+        );
+      }
+
+      /* ── Equipment section header entrance ── */
+      const eqHeader = document.querySelector('.equipment-section-header');
+      if (eqHeader) {
+        gsap.fromTo(eqHeader,
+          { y: 30, opacity: 0 },
+          {
+            y: 0,
+            opacity: 1,
+            duration: 0.7,
+            ease: 'power3.out',
+            scrollTrigger: {
+              trigger: '#equipment',
+              start: 'top 80%',
+              once: true
+            }
+          }
+        );
+      }
+
+      /* ── Quality section spec items stagger ── */
+      const qualitySpecs = document.querySelectorAll('#quality .cap-spec-item');
+      if (qualitySpecs.length) {
+        gsap.fromTo(qualitySpecs,
+          { y: 20, opacity: 0 },
+          {
+            y: 0,
+            opacity: 1,
+            duration: 0.6,
+            stagger: 0.1,
+            ease: 'power3.out',
+            scrollTrigger: {
+              trigger: '#quality',
+              start: 'top 70%',
+              once: true
+            }
+          }
+        );
+      }
+    });
+  </script>
+</body>
+
+</html>

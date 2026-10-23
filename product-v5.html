@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Engineered OEM Components | Vimal Forge LLP</title>
+  <meta name="description" content="Explore custom engineering solutions for bearing, automotive, hydraulic, oil &amp; gas, construction and heavy engineering OEMs. Upload CAD drawings for rapid RFQ.">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/motion.css">
+  <link rel="stylesheet" href="/css/product-v5.css">
+</head>
+<body>
+  <div id="page-content">
+
+    <!-- Header Section -->
+    <include src="components/header.html"></include>
+
+    <!-- SECTION 1: PRODUCT HERO -->
+    <section class="hero-v5 h-screen w-full relative overflow-hidden">
+      <canvas id="hero-canvas" class="hero-v5-particles"></canvas>
+      <div class="hero-v5-grid">
+        
+        <div class="hero-v5-left">
+          <span class="hero-v5-eyebrow">OUR PRODUCTS</span>
+          <h1 class="hero-v5-heading giant-heading gradient-text">Engineered Forged Components For Every Industry</h1>
+          <p class="hero-v5-subtext story-subtext">Precision forged, ring rolled and machined components supporting OEM manufacturing requirements across automotive, bearing, oil &amp; gas, hydraulic, construction and heavy engineering sectors.</p>
+          <div class="hero-v5-actions">
+            <a href="#industry-explorer" class="btn btn-primary">Explore Industries</a>
+            <a href="#rfq-section" class="btn btn-secondary">Request RFQ</a>
+          </div>
+        </div>
+
+        <div class="hero-v5-right">
+          <div class="hero-v5-image-wrap">
+            <div class="hero-v5-image-frame">
+              <img src="/assets/images/hero_rings.png" alt="Precision Machined Forged Rings">
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 2: IMMERSIVE INDUSTRY EXPLORER -->
+    <section id="industry-explorer" class="explorer-section w-full relative overflow-hidden">
+      
+      <!-- Background Layers for Fading transitions -->
+      <div class="explorer-bg-layer active" data-ind="bearing" style="background-image: url('/assets/images/bearing_races_showcase.png');"></div>
+      <div class="explorer-bg-layer" data-ind="automotive" style="background-image: url('/assets/images/gear_blanks_showcase.png');"></div>
+      <div class="explorer-bg-layer" data-ind="oilgas" style="background-image: url('https://vimalsteelforge.com/wp-content/uploads/2024/09/FORGE-HOUSING.jpg');"></div>
+      <div class="explorer-bg-layer" data-ind="hydraulic" style="background-image: url('/assets/images/cylinder_ends_showcase.png');"></div>
+      <div class="explorer-bg-layer" data-ind="construction" style="background-image: url('/assets/images/custom_forgings_showcase.png');"></div>
+      <div class="explorer-bg-layer" data-ind="heavy-engineering" style="background-image: url('https://vimalsteelforge.com/wp-content/uploads/2021/04/costmise-forged-ring.png');"></div>
+
+      <div class="explorer-bg-overlay"></div>
+
+      <div class="explorer-grid">
+        
+        <!-- Left vertical selection menu -->
+        <div class="explorer-left-menu">
+          <button class="explorer-menu-item active" data-ind="bearing">Bearing Industry</button>
+          <button class="explorer-menu-item" data-ind="automotive">Automotive</button>
+          <button class="explorer-menu-item" data-ind="oilgas">Oil &amp; Gas</button>
+          <button class="explorer-menu-item" data-ind="hydraulic">Hydraulic</button>
+          <button class="explorer-menu-item" data-ind="construction">Construction Equipment</button>
+          <button class="explorer-menu-item" data-ind="heavy-engineering">Heavy Engineering</button>
+        </div>
+
+        <!-- Right info overlay panel -->
+        <div class="explorer-right-info">
+          <span class="exp-hud-badge">OEM Supply Sector</span>
+          <h3 id="exp-title">Bearing Industry</h3>
+          <p class="explorer-desc" id="exp-desc">Supplying high-cleanliness chrome steel outer and inner races to global top-tier bearing manufacturers. Custom radial-axial rolling controls grain structure orientation, multiplying mechanical fatigue limits under continuous anti-friction wear.</p>
+          
+          <span class="explorer-list-title">Applications Supported</span>
+          <div class="explorer-apps-list" id="exp-apps-box">
+            <!-- Dynamically populated by product-v5.js -->
+          </div>
+
+          <a href="#product-experience" class="btn btn-primary">View Products</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 3: INDUSTRY-BASED PRODUCT EXPERIENCE (Apple-Style Storytelling) -->
+    <section id="product-experience" class="story-product-section w-full relative">
+      
+      <!-- Block 1: Bearing Rings -->
+      <div class="story-product-block">
+        <div class="story-prod-media">
+          <img src="/assets/images/bearing_rings.png" alt="Precision Forged Bearing Rings">
+        </div>
+        <div class="story-prod-text">
+          <span class="story-prod-tag">Premium Forging Line</span>
+          <h3 class="story-heading">Seamless Bearing Rings</h3>
+          <p class="story-subtext text-grey-light">Precision rolled bearing races engineered to maximize lifespan under high-stress conditions. In-house spheroidization heat treatment refines carbide distribution to secure optimal turning parameters and wear resistance.</p>
+          
+          <div class="story-prod-specs">
+            <div class="story-spec-card">
+              <span class="story-spec-lbl">Diameter Limits</span>
+              <span class="story-spec-val">Up to 500 mm OD</span>
+            </div>
+            <div class="story-spec-card">
+              <span class="story-spec-lbl">Steel Alloys</span>
+              <span class="story-spec-val">SAE 52100 / 100Cr6</span>
+            </div>
+          </div>
+          <a href="/rfq.html?product=Bearing%20Rings" class="btn btn-primary">Request Custom RFQ</a>
+        </div>
+      </div>
+
+      <!-- Block 2: Bearing Sleeves (Reverse Alignment) -->
+      <div class="story-product-block reverse-block">
+        <div class="story-prod-media">
+          <img src="/assets/images/bearing_sleeves.png" alt="Precision Machined Bearing Sleeves">
+        </div>
+        <div class="story-prod-text">
+          <span class="story-prod-tag">CNC Finish Turning</span>
+          <h3 class="story-heading">Turned Bearing Sleeves</h3>
+          <p class="story-subtext text-grey-light">Rough-machined or finished turned cylindrical sleeves holding tight 15-micron limits. Our lathe centers deliver final tolerance parameters matching exact coordination specs, ready for final grinding.</p>
+          
+          <div class="story-prod-specs">
+            <div class="story-spec-card">
+              <span class="story-spec-lbl">Tolerances</span>
+              <span class="story-spec-val">Within 15 microns</span>
+            </div>
+            <div class="story-spec-card">
+              <span class="story-spec-lbl">Target Units</span>
+              <span class="story-spec-val">Spindles, Washers</span>
+            </div>
+          </div>
+          <a href="/rfq.html?product=Bearing%20Sleeves" class="btn btn-primary">Request Custom RFQ</a>
+        </div>
+      </div>
+
+      <!-- Block 3: Gear Blanks -->
+      <div class="story-product-block">
+        <div class="story-prod-media">
+          <img src="/assets/images/gear_blanks.png" alt="Forged Gear Blanks">
+        </div>
+        <div class="story-prod-text">
+          <span class="story-prod-tag">Automotive Transmission</span>
+          <h3 class="story-heading">Planetary Gear Blanks</h3>
+          <p class="story-subtext text-grey-light">Closed-die hammer forged gear ring blanks with isothermal normalizing annealing. Refines grain boundary profiles to eliminate internal residual stresses, ensuring zero deformation during gear tooth-cutting processes.</p>
+          
+          <div class="story-prod-specs">
+            <div class="story-spec-card">
+              <span class="story-spec-lbl">Gearing Use</span>
+              <span class="story-spec-val">Planetary, Bevel</span>
+            </div>
+            <div class="story-spec-card">
+              <span class="story-spec-lbl">Alloys</span>
+              <span class="story-spec-val">20MnCr5 / 16MnCr5</span>
+            </div>
+          </div>
+          <a href="/rfq.html?product=Gear%20Blanks" class="btn btn-primary">Request Custom RFQ</a>
+        </div>
+      </div>
+
+      <!-- Block 4: Lock Nuts (Reverse Alignment) -->
+      <div class="story-product-block reverse-block">
+        <div class="story-prod-media">
+          <img src="/assets/images/lock_nuts.png" alt="Machined Lock Nuts">
+        </div>
+        <div class="story-prod-text">
+          <span class="story-prod-tag">Fastening Integrity</span>
+          <h3 class="story-heading">Heavy-Duty Lock Nuts</h3>
+          <p class="story-subtext text-grey-light">Precision-threaded drop-forged lock nuts designed to secure bearing arrays in place. Engineered thread tolerances prevent backing off under high vibration environments in transmission structures.</p>
+          
+          <div class="story-prod-specs">
+            <div class="story-spec-card">
+              <span class="story-spec-lbl">Machining</span>
+              <span class="story-spec-val">CNC Thread Cutting</span>
+            </div>
+            <div class="story-spec-card">
+              <span class="story-spec-lbl">Carbon Steel</span>
+              <span class="story-spec-val">C45 / EN8 Structural</span>
+            </div>
+          </div>
+          <a href="/rfq.html?product=Lock%20Nuts" class="btn btn-primary">Request Custom RFQ</a>
+        </div>
+      </div>
+
+      <!-- Block 5: Spacer Rings -->
+      <div class="story-product-block">
+        <div class="story-prod-media">
+          <img src="/assets/images/spacer_rings.png" alt="Machined Spacer Rings">
+        </div>
+        <div class="story-prod-text">
+          <span class="story-prod-tag">Structural Spacing</span>
+          <h3 class="story-heading">High-Tolerance Spacer Rings</h3>
+          <p class="story-subtext text-grey-light">Thick-walled spacer rings and yokes. Radial-axial rolled blanks are pre-turned on vertical lathes, maintaining matching thickness parameters to absorb huge axial thrust jumps.</p>
+          
+          <div class="story-prod-specs">
+            <div class="story-spec-card">
+              <span class="story-spec-lbl">Process</span>
+              <span class="story-spec-val">Radial CNC Ring Rolling</span>
+            </div>
+            <div class="story-spec-card">
+              <span class="story-spec-lbl">Applications</span>
+              <span class="story-spec-val">Heavy Gearbox Columns</span>
+            </div>
+          </div>
+          <a href="/rfq.html?product=Spacer%20Rings" class="btn btn-primary">Request Custom RFQ</a>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- SECTION 4: MANUFACTURING JOURNEY VISUALIZATION (GSAP Pinned horizontal scroll) -->
+    <section class="journey-pin-section w-full relative">
+      <div class="journey-sticky-wrapper">
+        <div class="journey-horizontal-track">
+          
+          <!-- Stage 1: Raw Billet Shearing -->
+          <div class="journey-stage">
+            <div class="journey-stage-grid">
+              <div class="journey-stage-left">
+                <span class="giant-number">01</span>
+                <h3 class="story-heading">Billet Shearing &amp; Volume Control</h3>
+                <p>Raw alloy steel bar stocks are verified for chemistry and sheared into computed billet blocks. Exact volume calculations ensure zero flash waste and optimize starting density limits.</p>
+              </div>
+              <div class="journey-stage-right">
+                <img src="/assets/images/about_story_factory.png" alt="Steel Bar Shearing">
+                <div class="journey-stage-overlay"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stage 2: FEA Flow Simulation -->
+          <div class="journey-stage">
+            <div class="journey-stage-grid">
+              <div class="journey-stage-left">
+                <span class="giant-number">02</span>
+                <h3 class="story-heading">FEA Metal Flow Simulation</h3>
+                <p>Before carving tooling, our design office runs DEFORM-3D simulations to validate temperature limits and metal flow. Prevents forging stress cracks and ensures clean grain orientation.</p>
+              </div>
+              <div class="journey-stage-right">
+                <img src="/assets/images/timeline_2024.png" alt="Metal Flow Simulation">
+                <div class="journey-stage-overlay"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stage 3: In-House Die shop -->
+          <div class="journey-stage">
+            <div class="journey-stage-grid">
+              <div class="journey-stage-left">
+                <span class="giant-number">03</span>
+                <h3 class="story-heading">In-House VMC Die shop</h3>
+                <p>Hot-forging closed dies are cut directly from 3D models using multi-axis high-speed Haas vertical machining centers (VMC). Limits prototyping loops to a tight 15-day cycle.</p>
+              </div>
+              <div class="journey-stage-right">
+                <img src="/assets/images/timeline_2026.png" alt="Precision CNC Milling of Dies">
+                <div class="journey-stage-overlay"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stage 4: Hot Press Forging -->
+          <div class="journey-stage">
+            <div class="journey-stage-grid">
+              <div class="journey-stage-left">
+                <span class="giant-number">04</span>
+                <h3 class="story-heading">Hot Forging &amp; Ring Rolling</h3>
+                <p>Billets are induction-heated to 1150°C, pressed into punched pre-forms, and expanded dynamically on radial-axial CNC ring rolling mills. Refines structural steel grain flow along the hoops.</p>
+              </div>
+              <div class="journey-stage-right">
+                <img src="/assets/images/rolled_rings_showcase.png" alt="CNC Ring Rolling Mills">
+                <div class="journey-stage-overlay"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stage 5: Metrology QA Inspection -->
+          <div class="journey-stage">
+            <div class="journey-stage-grid">
+              <div class="journey-stage-left">
+                <span class="giant-number">05</span>
+                <h3 class="story-heading">Metrology &amp; Crack Audits</h3>
+                <p>Finished components undergo normalizing or spheroidize annealing, CNC lathe coordinate check, non-destructive wet magnetic particle inspection (MPI), and spectrometer analysis.</p>
+              </div>
+              <div class="journey-stage-right">
+                <img src="/assets/images/bearing-rotating.png" alt="Spectrometer and MPI crack audit">
+                <div class="journey-stage-overlay"></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: LARGE PRODUCT-FOCUSED GALLERY (Full-Bleed visual panels) -->
+    <section class="gallery-v5-section w-full relative">
+      <div class="section-v5-container" style="text-align: center; max-width: 800px; margin-bottom: 4rem;">
+        <span class="section-tagline">Visual Portfolio</span>
+        <h2 class="section-title text-white">Forged &amp; Machined Quality</h2>
+      </div>
+
+      <div class="gallery-grid-v5">
+        
+        <!-- Panel 1 -->
+        <div class="gallery-panel">
+          <img src="/assets/images/cylinder_ends_showcase.png" alt="Hydraulic Cylinder End Forging">
+          <div class="gallery-panel-overlay">
+            <h4>Cylinder Bottom Caps</h4>
+            <p>Hydraulics | C45 Carbon Steel</p>
+          </div>
+        </div>
+
+        <!-- Panel 2 -->
+        <div class="gallery-panel alt-size">
+          <img src="/assets/images/custom_forgings_showcase.png" alt="Closed Die Bracket Forging">
+          <div class="gallery-panel-overlay">
+            <h4>Drop Forged Brackets</h4>
+            <p>Construction | EN19 Alloy</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="gallery-row-v2">
+        
+        <!-- Panel 3 -->
+        <div class="gallery-panel alt-size">
+          <img src="https://vimalsteelforge.com/wp-content/uploads/2024/09/FORGE-HOUSING.jpg" alt="Adaptor Housing Forging">
+          <div class="gallery-panel-overlay">
+            <h4>Pipeline Adaptor Housings</h4>
+            <p>Oil &amp; Gas | SS316 Stainless</p>
+          </div>
+        </div>
+
+        <!-- Panel 4 -->
+        <div class="gallery-panel">
+          <img src="https://vimalsteelforge.com/wp-content/uploads/2024/09/NTN-SPINDLE.jpg" alt="Turned Axle Hub Spindle">
+          <div class="gallery-panel-overlay">
+            <h4>Machined Axle Spindles</h4>
+            <p>Automotive | EN24 Structural</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 6: ENGINEERING CAPABILITY SHOWCASE -->
+    <section class="capability-v5-section w-full relative">
+      <div class="section-v5-container">
+        
+        <div class="ind-carousel-header" style="margin-bottom: 2rem;">
+          <div>
+            <span class="section-tagline">Engineering Capabilities</span>
+            <h2 class="section-title text-white">Metallurgy &amp; Telemetry</h2>
+          </div>
+        </div>
+
+        <div class="capability-grid-v5">
+          
+          <!-- Left side: Interactive Alloy Dashboard -->
+          <div class="alloy-dashboard-box">
+            <div class="alloy-cat-row">
+              <button class="alloy-cat-btn active" data-alloy="bearing">Bearing Chrome</button>
+              <button class="alloy-cat-btn" data-alloy="alloy">Alloy Hardening</button>
+              <button class="alloy-cat-btn" data-alloy="carbon">Medium Carbon</button>
+              <button class="alloy-cat-btn" data-alloy="stainless">Stainless Steel</button>
+            </div>
+
+            <div class="alloy-tags-container" id="alloy-tags-wrapper">
+              <!-- Dynamically populated by product-v5.js -->
+            </div>
+
+            <div class="alloy-details-panel" id="alloy-details-panel">
+              <div class="alloy-meta-header">
+                <span class="alloy-meta-family" id="meta-family">Bearing Steel</span>
+                <h4 id="meta-title">SAE 52100 / 100Cr6</h4>
+              </div>
+              <div class="alloy-fields-list" style="margin-top: 2rem;">
+                <div class="alloy-field-item">
+                  <span>COMPATIBLE PARTS</span>
+                  <p id="meta-components">Precision races, Washer sleeves, Spacer rings</p>
+                </div>
+                <div class="alloy-field-item">
+                  <span>CORE APPLICATIONS</span>
+                  <p id="meta-apps">Anti friction ball bearings, rolling assemblies</p>
+                </div>
+                <div class="alloy-field-item">
+                  <span>TREATMENT PROCESS</span>
+                  <p id="meta-process">Spheroidize Annealed to secure carbide dispersion</p>
+                </div>
+                <div class="alloy-field-item">
+                  <span>INDUSTRIES SERVED</span>
+                  <p id="meta-industries">Anti friction bearings, automotive gearboxes</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right side: Technical Telemetry Specifications -->
+          <div class="capability-telemetry">
+            <h4 class="spec-block-title" style="margin-bottom: 2rem; color: #fff; font-size: 1.2rem;">Quality Telemetry Specs</h4>
+            
+            <div class="telemetry-row">
+              <span>Machining Tolerances</span>
+              <strong>± 15 Microns (<span class="telemetry-accent">coordinate precision</span>)</strong>
+            </div>
+
+            <div class="telemetry-row">
+              <span>Outer Diameter Sizing</span>
+              <strong>Up to 500 mm OD (radial-axial rolled)</strong>
+            </div>
+
+            <div class="telemetry-row">
+              <span>Hardness Range</span>
+              <strong>280 - 320 BHN (Quenched &amp; Tempered)</strong>
+            </div>
+
+            <div class="telemetry-row">
+              <span>Material Traceability</span>
+              <strong>100% Heat-Code Barcode Records</strong>
+            </div>
+
+            <div class="telemetry-row">
+              <span>Simulation Feasibility</span>
+              <strong>DEFORM-3D Forging Flow Analysis</strong>
+            </div>
+
+            <div class="telemetry-row">
+              <span>Non-Destructive Testing</span>
+              <strong>Wet Magnetic Particle Inspection (MPI) &amp; Spectro</strong>
+            </div>
+
+            <div class="telemetry-row">
+              <span>Process Controls</span>
+              <strong>ISO 9001:2015 Audited Operations</strong>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 7: PREMIUM RFQ SECTION (B2B drawing portal) -->
+    <section id="rfq-section" class="rfq-v5-section w-full relative">
+      <div class="rfq-v5-grid">
+        
+        <div class="rfq-v5-info">
+          <h2 class="rfq-v5-heading">Can't Find The Component You Are Looking For?</h2>
+          <p class="rfq-v5-subtext">We manufacture custom forged, ring rolled and machined components according to customer drawings and specifications. Partner with our plant engineering office for rapid feasibility reviews and prototyping.</p>
+          
+          <div class="rfq-steps-grid">
+            
+            <div class="rfq-step-box">
+              <span class="rfq-step-num">01</span>
+              <div>
+                <h5>Drawing Submission</h5>
+                <p>Submit 3D models (STEP/IGS) or PDF/DWG formats.</p>
+              </div>
+            </div>
+
+            <div class="rfq-step-box">
+              <span class="rfq-step-num">02</span>
+              <div>
+                <h5>Engineering Review</h5>
+                <p>Our metallurgists review tolerances and alloy chemistry suitability.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="rfq-v5-card">
+          <h4>B2B Component Portal</h4>
+          <p>Drag and drop or select your engineering files (up to 25MB)</p>
+          
+          <div class="rfq-upload-zone" id="drawing-upload-zone">
+            <span class="rfq-upload-icon">⤒</span>
+            <span class="box-text">Click to browse or drop file here</span>
+            <input type="file" id="rfq-file-input" style="display:none;">
+          </div>
+          
+          <div id="file-list-display" style="display:none;"></div>
+          
+          <a href="/rfq.html" class="btn btn-primary">Proceed to RFQ Details</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <include src="components/footer.html"></include>
+
+  </div> <!-- end #page-content -->
+
+  <!-- Sticky Overlays -->
+  <div class="sticky-widgets-container">
+    <a href="https://wa.me/919979777787?text=Hi%20Vimal%20Forge,%20we%20have%20an%20RFQ%20inquiry." class="floating-btn floating-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">💬</a>
+    <a href="/rfq.html" class="floating-btn floating-rfq" aria-label="Request Quotation">RFQ</a>
+  </div>
+  <div class="mobile-call-bar">
+    <a href="tel:+919979777787">📞 Call Sourcing Manager (+91 99797 77787)</a>
+  </div>
+
+  <!-- A/B/C Comparison Floating Pill (Updated for Version 5) -->
+  <div class="ab-comparison-floating-pill">
+    <a href="/products-v1.html" class="ab-pill-btn">OEM Experience (A)</a>
+    <a href="/products-v2.html" class="ab-pill-btn">Modern Catalog (B)</a>
+    <a href="/products-v3.html" class="ab-pill-btn">Flagship Design (D)</a>
+    <a href="/products-v4.html" class="ab-pill-btn">Ecosystem (V4)</a>
+    <a href="/product-v5.html" class="ab-pill-btn active">OEM Redesign (V5)</a>
+  </div>
+
+  <!-- Immersive Motion Design Engines -->
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script type="module" src="/js/motion.js"></script>
+  <script type="module" src="/js/product-v5.js"></script>
+  <script type="module" src="/js/main.js"></script>
+</body>
+</html>

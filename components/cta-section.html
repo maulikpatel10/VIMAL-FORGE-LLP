@@ -1,0 +1,127 @@
+<!-- Section: Redesigned Global RFQ Sourcing Portal -->
+<section class="rfq-cta-section" id="rfq-section">
+  <!-- Forging Sparks Canvas Background -->
+  <canvas id="rfq-sparks" class="rfq-sparks-canvas"></canvas>
+
+  <div class="section-container">
+    <div class="grid-2">
+      <!-- Left Column: Credibility & Feature Cards -->
+      <div class="rfq-sidebar-info" data-anim="fade-in">
+        <div>
+          <span class="section-tagline">Streamlined Sourcing</span>
+          <h2 class="section-title">Ready To Discuss Your Next Component?</h2>
+          <p class="rfq-sidebar-desc">
+            Upload your engineering drawing or technical requirement and our engineering team will review your project and provide manufacturing feasibility along with a quotation.
+          </p>
+        </div>
+
+        <div class="rfq-feature-cards">
+          <!-- Card 1 -->
+          <div class="rfq-feature-card">
+            <div class="rfq-feature-icon">
+              <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+            </div>
+            <div class="rfq-feature-text">
+              <h4>Fast RFQ Response</h4>
+              <p>Average engineering review within 24 hours.</p>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="rfq-feature-card">
+            <div class="rfq-feature-icon">
+              <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 21H2V3l7 4v3l7-4v3l6-4v18z"/>
+                <path d="M17 21v-7a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2v7"/>
+              </svg>
+            </div>
+            <div class="rfq-feature-text">
+              <h4>OEM Manufacturing</h4>
+              <p>Integrated Ring Rolling, Forging & CNC Machining.</p>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="rfq-feature-card">
+            <div class="rfq-feature-icon">
+              <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                <polyline points="9 11 11 13 15 9"/>
+              </svg>
+            </div>
+            <div class="rfq-feature-text">
+              <h4>ISO 9001 Certified</h4>
+              <p>Quality-controlled manufacturing with complete traceability.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Glassmorphic Sourcing Card -->
+      <div>
+        <div class="rfq-portal-card" data-anim="scale">
+          <div class="rfq-panel-content active" id="rfq-panel-request-rfq">
+            <h3 class="rfq-portal-title">Request Engineering Review</h3>
+            <form id="rfqForm" novalidate>
+              <div class="rfq-form-row">
+                <div class="rfq-form-group">
+                  <input type="text" id="name" class="rfq-form-input" placeholder=" " required>
+                  <label class="rfq-form-label" for="name">Your Name *</label>
+                </div>
+                <div class="rfq-form-group">
+                  <input type="text" id="company" class="rfq-form-input" placeholder=" " required>
+                  <label class="rfq-form-label" for="company">Company Name *</label>
+                </div>
+              </div>
+              <div class="rfq-form-row">
+                <div class="rfq-form-group">
+                  <input type="email" id="email" class="rfq-form-input" placeholder=" " required>
+                  <label class="rfq-form-label" for="email">Business Email *</label>
+                </div>
+                <div class="rfq-form-group">
+                  <input type="tel" id="phone" class="rfq-form-input" placeholder=" " required>
+                  <label class="rfq-form-label" for="phone">Phone / WhatsApp *</label>
+                </div>
+              </div>
+              
+              <!-- Custom upload area -->
+              <div class="rfq-form-group">
+                <div class="rfq-upload-zone" id="rfq-upload-zone">
+                  <svg class="rfq-upload-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                    <polyline points="17 8 12 3 7 8" />
+                    <line x1="12" y1="3" x2="12" y2="15" />
+                  </svg>
+                  <div class="rfq-upload-text-group">
+                    <h4>Upload Technical Drawing</h4>
+                    <p class="rfq-upload-info-text">Supported: PDF • STEP • DWG • DXF • ZIP</p>
+                    <p class="rfq-upload-action-text">Maximum 25MB • Click or Drag Files Here</p>
+                  </div>
+                  <input type="file" id="drawing" class="rfq-file-input" style="display: none;" accept=".pdf,.step,.stp,.dwg,.dxf,.zip">
+                </div>
+                <div class="rfq-file-preview" id="rfq-file-preview" style="display: none;"></div>
+              </div>
+
+              <div class="rfq-form-group">
+                <textarea id="message" class="rfq-form-textarea" placeholder="Briefly describe your project requirements..."></textarea>
+              </div>
+
+              <!-- Response Badge -->
+              <div class="rfq-badge-container">
+                <span class="rfq-response-badge">⚡ Average Response &lt;24 Hours</span>
+              </div>
+
+              <!-- Submit Button -->
+              <button type="submit" class="rfq-btn-submit">
+                Request Engineering Review <span class="btn-arrow">&rarr;</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

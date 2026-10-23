@@ -1,0 +1,548 @@
+/* ==========================================================================
+   VIMAL FORGE LLP - SINGLE-SCREEN (100VH) PREMIUM RFQ PORTAL STYLESHEET
+   ========================================================================== */
+
+/* Brand Theme Variables */
+:root {
+  --color-rfq-bg: #0b1220;
+  --color-rfq-accent: #FF7A1A;
+  --color-rfq-accent-rgb: 255, 122, 26;
+  --color-rfq-accent-hover: #D75A1E;
+  --color-rfq-card-bg: rgba(15, 23, 42, 0.45);
+  --color-rfq-border: rgba(255, 255, 255, 0.05);
+  --color-rfq-text-muted: rgba(255, 255, 255, 0.5);
+  --color-rfq-input-bg: rgba(15, 23, 42, 0.6);
+  --color-rfq-input-border: rgba(255, 255, 255, 0.08);
+}
+
+/* 1. Immersive Portal Layout & Backgrounds */
+.rfq-portal-wrapper {
+  background-color: var(--color-rfq-bg);
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    radial-gradient(circle at 15% 25%, rgba(255, 122, 26, 0.05) 0%, transparent 45%),
+    radial-gradient(circle at 85% 75%, rgba(255, 122, 26, 0.05) 0%, transparent 45%);
+  background-size: 24px 24px, 24px 24px, 100% 100%, 100% 100%;
+  position: relative;
+  overflow: hidden;
+  padding: 3rem 0;
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* Desktop screen constraint (No Scroll) */
+@media (min-width: 992px) {
+  .rfq-portal-wrapper {
+    height: calc(100vh - 80px);
+    padding: 0;
+  }
+}
+
+/* Floating Particle Animation */
+.rfq-particles-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.rfq-particle {
+  position: absolute;
+  background: var(--color-rfq-accent);
+  border-radius: 50%;
+  opacity: 0.15;
+  filter: blur(2px);
+  animation: floatParticle 12s infinite ease-in-out;
+}
+
+@keyframes floatParticle {
+  0% { transform: translateY(100vh) scale(0.8); opacity: 0; }
+  10% { opacity: 0.2; }
+  90% { opacity: 0.2; }
+  100% { transform: translateY(-10vh) scale(1.2); opacity: 0; }
+}
+
+.rfq-portal-grid {
+  display: grid;
+  grid-template-columns: 42% 58%;
+  gap: 3.5rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 2rem;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  align-items: center;
+}
+
+/* 2. Left Column: Concise Sourcing Trust */
+.rfq-info-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.rfq-tagline {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--color-rfq-accent);
+  margin-bottom: 0.4rem;
+  display: inline-block;
+}
+
+.rfq-portal-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.15;
+  margin-bottom: 0.6rem;
+  background: linear-gradient(135deg, #ffffff 60%, rgba(255, 255, 255, 0.7));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.rfq-portal-subtitle {
+  font-size: 0.98rem;
+  color: var(--color-rfq-text-muted);
+  line-height: 1.6;
+}
+
+/* 3 Compact Trust Points */
+.rfq-trust-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.rfq-trust-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.01);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  padding: 0.9rem 1.2rem;
+  transition: var(--transition-smooth);
+}
+
+.rfq-trust-item:hover {
+  background: rgba(255, 122, 26, 0.02);
+  border-color: rgba(255, 122, 26, 0.15);
+  transform: translateX(4px);
+}
+
+.rfq-trust-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 6px;
+  background: rgba(255, 122, 26, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-rfq-accent);
+  font-size: 0.95rem;
+  flex-shrink: 0;
+}
+
+.rfq-trust-text {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.rfq-trust-text h4 {
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.rfq-trust-text p {
+  font-size: 0.82rem;
+  color: var(--color-rfq-text-muted);
+}
+
+/* 3. Right Column: Glassmorphism RFQ Form Card */
+.rfq-portal-card {
+  background: var(--color-rfq-card-bg);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border: 1px solid var(--color-rfq-border);
+  border-radius: 20px;
+  padding: 2.2rem 2.8rem;
+  box-shadow: 
+    0 25px 50px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.03);
+}
+
+/* 4. Inputs with Floating Labels & Subtle Icons (16px border-radius) */
+.rfq-form-group {
+  position: relative;
+  margin-bottom: 1.1rem;
+}
+
+.rfq-form-input {
+  width: 100%;
+  background: var(--color-rfq-input-bg);
+  border: 1px solid var(--color-rfq-input-border);
+  border-radius: 16px;
+  padding: 1.15rem 1.15rem 1.15rem 3.25rem;
+  font-size: 0.92rem;
+  color: #ffffff;
+  outline: none;
+  transition: var(--transition-smooth);
+}
+
+/* Orange Focus State with Glow */
+.rfq-form-input:focus {
+  border-color: rgba(255, 122, 26, 0.6);
+  background: rgba(15, 23, 42, 0.85);
+  box-shadow: 0 0 14px rgba(255, 122, 26, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.02);
+}
+
+/* Floating Label Logic */
+.rfq-form-label {
+  position: absolute;
+  left: 3.25rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-rfq-text-muted);
+  font-size: 0.92rem;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Float Label Up State */
+.rfq-form-input:focus ~ .rfq-form-label,
+.rfq-form-input:not(:placeholder-shown) ~ .rfq-form-label {
+  top: 0;
+  transform: translateY(-50%) scale(0.78);
+  left: 1.2rem;
+  background: #0d1423;
+  padding: 0 0.4rem;
+  color: var(--color-rfq-accent);
+}
+
+/* Icons Inside Inputs */
+.rfq-input-icon {
+  position: absolute;
+  left: 1.2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-rfq-text-muted);
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+  font-size: 1.1rem;
+  transition: var(--transition-smooth);
+}
+
+.rfq-form-input:focus ~ .rfq-input-icon {
+  color: var(--color-rfq-accent);
+}
+
+/* 5. Drag-and-Drop Drawing Upload Zone (Super Compact) */
+.rfq-upload-zone {
+  border: 2px dashed rgba(255, 122, 26, 0.25);
+  background: rgba(255, 122, 26, 0.005);
+  border-radius: 16px;
+  padding: 1.2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  position: relative;
+}
+
+.rfq-upload-zone:hover,
+.rfq-upload-zone.dragover {
+  border-color: var(--color-rfq-accent);
+  background: rgba(255, 122, 26, 0.02);
+  box-shadow: 0 0 15px rgba(255, 122, 26, 0.06);
+}
+
+.rfq-upload-icon {
+  font-size: 1.8rem;
+  color: var(--color-rfq-accent);
+  opacity: 0.85;
+  flex-shrink: 0;
+}
+
+.rfq-upload-text-group {
+  text-align: left;
+}
+
+.rfq-upload-zone h4 {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.15rem;
+}
+
+.rfq-upload-zone p {
+  font-size: 0.75rem;
+  color: var(--color-rfq-text-muted);
+  line-height: 1.3;
+}
+
+/* Uploaded Files Preview Cards */
+.rfq-file-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-top: 0.6rem;
+}
+
+.rfq-file-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--color-rfq-input-border);
+  border-radius: 12px;
+  padding: 0.6rem 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition-smooth);
+}
+
+.rfq-file-card-details {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex: 1;
+}
+
+.rfq-file-card-icon {
+  font-size: 1.2rem;
+  color: var(--color-rfq-accent);
+}
+
+.rfq-file-card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.05rem;
+}
+
+.rfq-file-card-name {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #ffffff;
+  word-break: break-all;
+}
+
+.rfq-file-card-size {
+  font-size: 0.68rem;
+  color: var(--color-rfq-text-muted);
+}
+
+/* Delete Button */
+.rfq-file-card-delete {
+  background: transparent;
+  border: none;
+  color: var(--color-rfq-text-muted);
+  cursor: pointer;
+  padding: 0.2rem;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  transition: var(--transition-smooth);
+  z-index: 10;
+}
+
+.rfq-file-card-delete:hover {
+  color: #ef4444;
+}
+
+/* File Upload Progress Bar */
+.rfq-file-card-progress {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  background: var(--color-rfq-accent);
+  width: 0%;
+  transition: width 1.5s linear;
+}
+
+.rfq-file-card.complete .rfq-file-card-progress {
+  background: #10b981;
+}
+
+.rfq-file-card.complete {
+  border-color: rgba(16, 185, 129, 0.25);
+  background: rgba(16, 185, 129, 0.02);
+}
+
+/* Project Requirement Textarea (Small) */
+.rfq-form-textarea {
+  width: 100%;
+  background: var(--color-rfq-input-bg);
+  border: 1px solid var(--color-rfq-input-border);
+  border-radius: 16px;
+  padding: 1.15rem;
+  font-size: 0.92rem;
+  color: #ffffff;
+  outline: none;
+  min-height: 70px;
+  height: 70px;
+  resize: none;
+  transition: var(--transition-smooth);
+}
+
+.rfq-form-textarea:focus {
+  border-color: rgba(255, 122, 26, 0.6);
+  background: rgba(15, 23, 42, 0.85);
+  box-shadow: 0 0 14px rgba(255, 122, 26, 0.15);
+}
+
+/* 6. Response Badge & CTA Submit Button */
+.rfq-badge-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.6rem;
+  margin-top: 0.4rem;
+}
+
+.rfq-response-badge {
+  background: rgba(255, 122, 26, 0.08);
+  border: 1px solid rgba(255, 122, 26, 0.15);
+  color: var(--color-rfq-accent);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.rfq-btn-submit {
+  width: 100%;
+  background: linear-gradient(135deg, var(--color-rfq-accent) 0%, #e65c00 100%);
+  border: none;
+  color: #ffffff;
+  padding: 1.1rem 2.2rem;
+  border-radius: 16px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  box-shadow: 0 5px 15px rgba(255, 122, 26, 0.2);
+  transition: var(--transition-smooth);
+}
+
+.rfq-btn-submit:hover {
+  background: linear-gradient(135deg, var(--color-rfq-accent-hover) 0%, #cc5200 100%);
+  transform: translateY(-1.5px);
+  box-shadow: 0 7px 20px rgba(255, 122, 26, 0.35);
+}
+
+.rfq-btn-submit:disabled {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--color-rfq-text-muted);
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+/* 7. Success State Card (Compact) */
+.rfq-success-card {
+  text-align: center;
+  padding: 1.5rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.rfq-success-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(16, 185, 129, 0.1);
+  border: 2px solid #10b981;
+  color: #10b981;
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 15px rgba(16, 185, 129, 0.2);
+  animation: pulseSuccess 2s infinite alternate;
+}
+
+@keyframes pulseSuccess {
+  0% { transform: scale(1); box-shadow: 0 0 10px rgba(16, 185, 129, 0.15); }
+  100% { transform: scale(1.04); box-shadow: 0 0 20px rgba(16, 185, 129, 0.35); }
+}
+
+.rfq-success-card h3 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.rfq-success-card p {
+  color: var(--color-rfq-text-muted);
+  font-size: 0.88rem;
+  line-height: 1.5;
+  max-width: 400px;
+}
+
+/* 8. Minimal Single-Line Footer */
+.rfq-minimal-footer {
+  text-align: center;
+  font-size: 0.72rem;
+  color: var(--color-rfq-text-muted);
+  padding: 1.5rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.03);
+  background-color: var(--color-rfq-bg);
+  position: relative;
+  z-index: 10;
+}
+
+/* 9. Responsive Adjustments */
+@media (max-width: 991px) {
+  .rfq-portal-wrapper {
+    min-height: auto;
+    padding: 5rem 0;
+  }
+
+  .rfq-portal-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .rfq-info-panel {
+    align-items: center;
+    text-align: center;
+  }
+
+  .rfq-trust-list {
+    text-align: left;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .rfq-portal-card {
+    padding: 2rem 1.5rem;
+  }
+}

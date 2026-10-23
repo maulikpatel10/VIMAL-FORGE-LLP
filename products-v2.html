@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>B2B Forgings & Ring Rolling Catalog | Vimal Forge LLP</title>
+  <meta name="description" content="Browse Vimal Forge's comprehensive custom product catalog: Bearing rings, gear blanks, seamless rolled rings, turned components, and custom drawings.">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/motion.css">
+  <link rel="stylesheet" href="/css/products-v2.css">
+</head>
+<body>
+  <div id="page-content">
+
+    <!-- Header Section -->
+    <include src="components/header.html"></include>
+
+    <!-- 1. Hero Section -->
+    <section class="hero-v2">
+      <div class="hero-v2-container">
+        <span class="hero-v2-tag">Interactive Catalog</span>
+        <h1 class="hero-v2-title">B2B Product Discovery Catalog</h1>
+        <p class="hero-v2-subtitle">Filter by industrial categories or alloy material grades to find the specifications you need for your custom engineering projects.</p>
+        
+        <!-- Search bar input -->
+        <div class="catalog-search-wrap">
+          <input type="text" id="catalog-search" placeholder="Search products, grades, or applications... e.g. Gear Blanks, 52100, Hubs">
+          <span class="search-icon">🔍</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Product Categories Quick Grid -->
+    <section class="categories-grid-section">
+      <div class="section-container">
+        <div class="cat-grid">
+          <!-- Card 1 -->
+          <div class="cat-item-card" data-cat-link="bearing">
+            <span class="cat-icon">⚙️</span>
+            <h3>Bearing rings</h3>
+            <p>Races, thrust washers & nuts</p>
+          </div>
+          <!-- Card 2 -->
+          <div class="cat-item-card" data-cat-link="ring-rolling">
+            <span class="cat-icon">⭕</span>
+            <h3>Seamless rings</h3>
+            <p>Ring rolled gear blanks & spacers</p>
+          </div>
+          <!-- Card 3 -->
+          <div class="cat-item-card" data-cat-link="automotive">
+            <span class="cat-icon">🚗</span>
+            <h3>Automotive forgings</h3>
+            <p>Gear hubs, drums & structural pins</p>
+          </div>
+          <!-- Card 4 -->
+          <div class="cat-item-card" data-cat-link="custom">
+            <span class="cat-icon">📐</span>
+            <h3>Custom drawings</h3>
+            <p>Drawing-based valves & bushings</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Dynamic Filter System & Showcase Grid -->
+    <section class="catalog-main-section">
+      <div class="section-container">
+        
+        <!-- Filters Bar (Sticky) -->
+        <div class="filters-bar-container">
+          <div class="filters-group">
+            <span class="filter-group-label">Category:</span>
+            <div class="filter-buttons" id="category-filters">
+              <button class="filter-btn active" data-category="all">All Products</button>
+              <button class="filter-btn" data-category="bearing">Bearing Components</button>
+              <button class="filter-btn" data-category="ring-rolling">Rolled Rings</button>
+              <button class="filter-btn" data-category="automotive">Automotive Forgings</button>
+              <button class="filter-btn" data-category="custom">Custom Forgings</button>
+            </div>
+          </div>
+          
+          <div class="filters-group" style="margin-top: 1rem; border-top: 1px solid rgba(0,0,0,0.06); padding-top: 1rem;">
+            <span class="filter-group-label">Material Grade:</span>
+            <div class="filter-buttons" id="grade-filters">
+              <button class="filter-btn active" data-grade="all">All Grades</button>
+              <button class="filter-btn" data-grade="bearing-steel">SAE 52100 / 100Cr6</button>
+              <button class="filter-btn" data-grade="alloy-steel">Alloy Steels</button>
+              <button class="filter-btn" data-grade="carbon-steel">Carbon Steels</button>
+              <button class="filter-btn" data-grade="stainless-steel">Stainless Steel</button>
+            </div>
+          </div>
+          <div class="active-filters-summary">
+            Showing <strong id="visible-count">10</strong> of 10 components
+          </div>
+        </div>
+
+        <!-- Product Cards Grid -->
+        <div class="products-catalog-grid" id="catalog-grid">
+          
+          <!-- Card 1 -->
+          <div class="product-item-card" data-category="bearing" data-grade="bearing-steel" data-keywords="bearing races inner outer chrome steel 52100 100cr6">
+            <div class="p-card-media">
+              <img src="https://images.unsplash.com/photo-1610557892470-76d740220a3f?q=80&w=600&auto=format&fit=crop" alt="Inner & Outer Bearing Races">
+              <span class="p-card-tag">Bearing</span>
+            </div>
+            <div class="p-card-info">
+              <h3>Precision Bearing Races (Inner/Outer)</h3>
+              <p class="p-card-spec-glance">Size: 80mm – 500mm OD | Steel: SAE 52100</p>
+              <p class="p-card-desc">Engineered for maximum fatigue resistance in anti-friction assemblies. Controlled grain structure.</p>
+              <div class="p-card-actions">
+                <button class="btn-specs-trigger" data-product-id="1">View Specifications</button>
+                <a href="/rfq.html" class="btn-inquire-direct">RFQ</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="product-item-card" data-category="bearing" data-grade="bearing-steel carbon-steel" data-keywords="clutch release bearing rings spacer 52100 c45">
+            <div class="p-card-media">
+              <img src="https://images.unsplash.com/photo-1610557892470-76d740220a3f?q=80&w=600&auto=format&fit=crop" alt="Clutch Bearing Rings">
+              <span class="p-card-tag">Bearing</span>
+            </div>
+            <div class="p-card-info">
+              <h3>Clutch Release Bearing Rings</h3>
+              <p class="p-card-spec-glance">Size: 50mm – 200mm OD | Steel: SAE 52100 / Carbon</p>
+              <p class="p-card-desc">Specially tempered release rings suited for high rotational pressure in automotive gearboxes.</p>
+              <div class="p-card-actions">
+                <button class="btn-specs-trigger" data-product-id="2">View Specifications</button>
+                <a href="/rfq.html" class="btn-inquire-direct">RFQ</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="product-item-card" data-category="bearing" data-grade="carbon-steel alloy-steel" data-keywords="thrust washers lock groove nuts spacer en8 c45">
+            <div class="p-card-media">
+              <img src="https://images.unsplash.com/photo-1610557892470-76d740220a3f?q=80&w=600&auto=format&fit=crop" alt="Thrust Washers">
+              <span class="p-card-tag">Bearing</span>
+            </div>
+            <div class="p-card-info">
+              <h3>Thrust Washers &amp; Lock Nuts</h3>
+              <p class="p-card-spec-glance">Size: 40mm – 300mm OD | Steel: EN8 / C45</p>
+              <p class="p-card-desc">Premium density washers and lock/groove nuts forged to withstand axial loads without deformity.</p>
+              <div class="p-card-actions">
+                <button class="btn-specs-trigger" data-product-id="3">View Specifications</button>
+                <a href="/rfq.html" class="btn-inquire-direct">RFQ</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="product-item-card" data-category="ring-rolling" data-grade="alloy-steel" data-keywords="gear ring blanks rolled rings seamless 20MnCr5 16mncr5 8620">
+            <div class="p-card-media">
+              <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=600&auto=format&fit=crop" alt="Seamless Gear Ring Blanks">
+              <span class="p-card-tag">Seamless Rolled</span>
+            </div>
+            <div class="p-card-info">
+              <h3>Seamless Gear Ring Blanks</h3>
+              <p class="p-card-spec-glance">OD: 100mm – 450mm | Steel: 20MnCr5 / 8620</p>
+              <p class="p-card-desc">Seamless rolled blanks. Delivers perfect grain line flow and reduces stock-machining scrap rates by 30%.</p>
+              <div class="p-card-actions">
+                <button class="btn-specs-trigger" data-product-id="4">View Specifications</button>
+                <a href="/rfq.html" class="btn-inquire-direct">RFQ</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="product-item-card" data-category="ring-rolling" data-grade="carbon-steel" data-keywords="seamless rolled spacers large sleeves flanges c45 en8">
+            <div class="p-card-media">
+              <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=600&auto=format&fit=crop" alt="Seamless Rolled Spacers">
+              <span class="p-card-tag">Seamless Rolled</span>
+            </div>
+            <div class="p-card-info">
+              <h3>Seamless Rolled Spacers &amp; Sleeves</h3>
+              <p class="p-card-spec-glance">OD: 80mm – 400mm | Steel: EN8 / C45 / C20</p>
+              <p class="p-card-desc">Thick-walled rings rolled dynamically. Suitable for heavy industrial gearbox spacers and couplings.</p>
+              <div class="p-card-actions">
+                <button class="btn-specs-trigger" data-product-id="5">View Specifications</button>
+                <a href="/rfq.html" class="btn-inquire-direct">RFQ</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="product-item-card" data-category="automotive" data-grade="alloy-steel" data-keywords="transmission gear blanks closed die forgings drop hammer 20MnCr5 8620 en19">
+            <div class="p-card-media">
+              <img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?q=80&w=600&auto=format&fit=crop" alt="Transmission Gear Blanks">
+              <span class="p-card-tag">Automotive</span>
+            </div>
+            <div class="p-card-info">
+              <h3>Transmission Gear Blanks</h3>
+              <p class="p-card-spec-glance">Weight: 1.0kg – 15kg | Steel: 20MnCr5 / 8620</p>
+              <p class="p-card-desc">Hot closed-die drop forged gear shapes. Perfect mechanical density for automotive powertrain gears.</p>
+              <div class="p-card-actions">
+                <button class="btn-specs-trigger" data-product-id="6">View Specifications</button>
+                <a href="/rfq.html" class="btn-inquire-direct">RFQ</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 7 -->
+          <div class="product-item-card" data-category="automotive" data-grade="alloy-steel carbon-steel" data-keywords="precision turned wheel hubs axles cnc machining en24 c45">
+            <div class="p-card-media">
+              <img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?q=80&w=600&auto=format&fit=crop" alt="Precision Turned Wheel Hubs">
+              <span class="p-card-tag">Automotive</span>
+            </div>
+            <div class="p-card-info">
+              <h3>Precision Turned Wheel Hubs</h3>
+              <p class="p-card-spec-glance">Tolerances: 15 microns | Steel: EN24 / EN19</p>
+              <p class="p-card-desc">Axle and gear wheel hubs supplied fully rough or finish turned on CNC and VMC mills. Ready for line assembly.</p>
+              <div class="p-card-actions">
+                <button class="btn-specs-trigger" data-product-id="7">View Specifications</button>
+                <a href="/rfq.html" class="btn-inquire-direct">RFQ</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 8 -->
+          <div class="product-item-card" data-category="automotive" data-grade="alloy-steel" data-keywords="heavy forged suspension pins differential cases 8620 20MnCr5">
+            <div class="p-card-media">
+              <img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?q=80&w=600&auto=format&fit=crop" alt="Heavy Forged Pins">
+              <span class="p-card-tag">Automotive</span>
+            </div>
+            <div class="p-card-info">
+              <h3>Heavy Forged Suspension Pins</h3>
+              <p class="p-card-spec-glance">Weight: 1.5kg – 8.0kg | Steel: Alloy 8620 / 20MnCr5</p>
+              <p class="p-card-desc">Induction hardened pins for heavy commercial vehicles and earthmover structural joint linkages.</p>
+              <div class="p-card-actions">
+                <button class="btn-specs-trigger" data-product-id="8">View Specifications</button>
+                <a href="/rfq.html" class="btn-inquire-direct">RFQ</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 9 -->
+          <div class="product-item-card" data-category="custom" data-grade="stainless-steel" data-keywords="custom high pressure valves flanges pipelines 316 304 410">
+            <div class="p-card-media">
+              <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=600&auto=format&fit=crop" alt="Custom High Pressure Valves">
+              <span class="p-card-tag">Custom Development</span>
+            </div>
+            <div class="p-card-info">
+              <h3>Custom High-Pressure Valve Bodies</h3>
+              <p class="p-card-spec-glance">Material: SS 316 / 304 / 410 | Forging: Closed Die</p>
+              <p class="p-card-desc">Specialty corrosion resistant valve housings for high pressure pipeline fittings and gas manifolds.</p>
+              <div class="p-card-actions">
+                <button class="btn-specs-trigger" data-product-id="9">View Specifications</button>
+                <a href="/rfq.html" class="btn-inquire-direct">RFQ</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 10 -->
+          <div class="product-item-card" data-category="custom" data-grade="alloy-steel carbon-steel" data-keywords="specialty hydraulic bushings cylinder joints mockups step step files">
+            <div class="p-card-media">
+              <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=600&auto=format&fit=crop" alt="Hydraulic Bushings">
+              <span class="p-card-tag">Custom Development</span>
+            </div>
+            <div class="p-card-info">
+              <h3>Specialty Hydraulic Cylinder Bushings</h3>
+              <p class="p-card-spec-glance">Tooling: 15 Days | Steel: Alloy / Medium Carbon</p>
+              <p class="p-card-desc">Machined bushings with precise oil-ways and groove margins built directly from client STEP formats.</p>
+              <div class="p-card-actions">
+                <button class="btn-specs-trigger" data-product-id="10">View Specifications</button>
+                <a href="/rfq.html" class="btn-inquire-direct">RFQ</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Industry Applications Grid -->
+    <section class="ind-app-section">
+      <div class="section-container">
+        <div class="text-center mb-4">
+          <span class="section-tagline">Where they are used</span>
+          <h2 class="section-title">Serving Critical Industries</h2>
+          <p class="section-subtitle">Vimal Forge's components are engineered for heavy-duty operational loads.</p>
+        </div>
+        <div class="ind-app-grid">
+          <div class="ind-app-card">
+            <h4>Bearing Manufacturers</h4>
+            <p>Outer/inner races for high wear deep-groove and tapered ball bearing models.</p>
+          </div>
+          <div class="ind-app-card">
+            <h4>Automotive OEMs</h4>
+            <p>Transmission blanks, clutch release rings and hub sleeves for vehicle driveshafts.</p>
+          </div>
+          <div class="ind-app-card">
+            <h4>Heavy Engineering</h4>
+            <p>High structural density gears, slewing rings, and industrial gearboxes.</p>
+          </div>
+          <div class="ind-app-card">
+            <h4>Hydraulics &amp; Oil/Gas</h4>
+            <p>High-integrity valve manifolds, couplings, cylinder adapters, and stainless steel pipe flanges.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Material Capability Table -->
+    <section class="section-bg-light material-table-section">
+      <div class="section-container">
+        <div class="text-center mb-4">
+          <span class="section-tagline">Chemical &amp; Grade Suitability</span>
+          <h2 class="section-title">Standard Material Specifications</h2>
+          <p class="section-subtitle">We stock and process standard grades to international standards.</p>
+        </div>
+        <div class="table-responsive">
+          <table class="cap-material-table">
+            <thead>
+              <tr>
+                <th>Category</th>
+                <th>Steel Grade</th>
+                <th>Equivalents</th>
+                <th>Core Characteristic</th>
+                <th>Primary Application</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Bearing Steel</strong></td>
+                <td>SAE 52100</td>
+                <td>100Cr6, GCr15</td>
+                <td>Extreme contact fatigue resistance, high carbon-chromium density</td>
+                <td>Ball bearing races, rollers, clutch components</td>
+              </tr>
+              <tr>
+                <td><strong>Alloy Steel</strong></td>
+                <td>20MnCr5 / 16MnCr5</td>
+                <td>EN353</td>
+                <td>Excellent surface hardness after carburization, ductile tough core</td>
+                <td>Transmission gears, spline hubs, planet rings</td>
+              </tr>
+              <tr>
+                <td><strong>Alloy Steel</strong></td>
+                <td>AISI 8620</td>
+                <td>SNCM220</td>
+                <td>Case hardening depth adaptibility, high fatigue limit</td>
+                <td>Pins, universal joints, differential gear boxes</td>
+              </tr>
+              <tr>
+                <td><strong>Carbon Steel</strong></td>
+                <td>EN8 / C45</td>
+                <td>1045</td>
+                <td>High tensile capability, smooth lathe machining behavior</td>
+                <td>Sleeves, spacers, hydraulic bushings, structural flanges</td>
+              </tr>
+              <tr>
+                <td><strong>Stainless Steel</strong></td>
+                <td>AISI 316 / 304</td>
+                <td>1.4401 / 1.4301</td>
+                <td>Corrosion resistance to marine, salty, and acidic fluid systems</td>
+                <td>High-pressure valves, pipe adapters, food processing rings</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Custom Manufacturing Callout -->
+    <section class="custom-callout-section">
+      <div class="section-container">
+        <div class="custom-callout-card">
+          <div class="callout-content">
+            <h3>Need a Custom Component Developed?</h3>
+            <p>Our engineers convert your 2D drawings or 3D STEP models into forged components. We simulation test metal flow (DEFORM-3D) and construct forging tools in-house in under 15 days.</p>
+            <a href="/rfq.html" class="btn btn-primary">Submit Engineering Specs</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Compact RFQ CTA -->
+    <include src="components/cta-section.html"></include>
+
+    <!-- Footer Section -->
+    <include src="components/footer.html"></include>
+
+  </div> <!-- end #page-content -->
+
+  <!-- Product Specifications Quick View Modal (Hidden by Default) -->
+  <div class="quickview-modal-overlay" id="quickview-modal">
+    <div class="quickview-modal-container">
+      <button class="quickview-close-btn" aria-label="Close modal">✕</button>
+      <div class="quickview-modal-body">
+        <!-- Left Column: Product Image -->
+        <div class="quickview-media-col">
+          <img src="" alt="Product Specification" id="qv-img">
+          <div class="quickview-badge" id="qv-category-badge">Bearing</div>
+        </div>
+        <!-- Right Column: Specs details -->
+        <div class="quickview-details-col">
+          <h2 id="qv-title">Precision Bearing Inner &amp; Outer Races</h2>
+          <p id="qv-desc" style="color: var(--color-grey-dark); font-size: 0.95rem; margin-bottom: 1.5rem;"></p>
+          
+          <h4 style="margin-bottom: 0.5rem; font-size: 0.9rem; color: var(--color-primary); text-transform: uppercase; letter-spacing: 1px;">Technical Drawing Parameters:</h4>
+          <table class="qv-spec-table">
+            <tr>
+              <td>Target Product Type</td>
+              <td id="qv-param-products">Bearing Outer &amp; Inner Races, Spacers</td>
+            </tr>
+            <tr>
+              <td>Material Grade Stocked</td>
+              <td id="qv-param-grades">SAE 52100 / 100Cr6 (bearing chrome steel)</td>
+            </tr>
+            <tr>
+              <td>Size Limits</td>
+              <td id="qv-param-size">80 mm to 500 mm Outer Diameter</td>
+            </tr>
+            <tr>
+              <td>Manufacturing Process</td>
+              <td id="qv-param-process">Press forging + Ring rolling + Machining</td>
+            </tr>
+            <tr>
+              <td>Primary Application</td>
+              <td id="qv-param-app">Ball and tapered roller bearing installations</td>
+            </tr>
+          </table>
+
+          <div class="quickview-cta-block">
+            <a href="" id="qv-inquire-btn" class="btn btn-primary" style="display: block; text-align: center;">Send Drawing Inquiry for this Item</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sticky Overlays -->
+  <div class="sticky-widgets-container">
+    <a href="https://wa.me/919979777787?text=Hi%20Vimal%20Forge,%20we%20have%20an%20RFQ%20inquiry." class="floating-btn floating-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">💬</a>
+    <a href="/rfq.html" class="floating-btn floating-rfq" aria-label="Request Quotation">RFQ</a>
+  </div>
+  <div class="mobile-call-bar">
+    <a href="tel:+919979777787">📞 Call Sourcing Manager (+91 99797 77787)</a>
+  </div>
+
+  <!-- A/B/C Comparison Floating Pill -->
+  <div class="ab-comparison-floating-pill">
+    <a href="/products-v1.html" class="ab-pill-btn">OEM Experience (A)</a>
+    <a href="/products-v2.html" class="ab-pill-btn active">Modern Catalog (B)</a>
+    <a href="/products-v3.html" class="ab-pill-btn">Dashboard Hub (C)</a>
+  </div>
+
+  <!-- Motion & Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script type="module" src="/js/motion.js"></script>
+  <script type="module" src="/js/products-v2.js"></script>
+  <script type="module" src="/js/main.js"></script>
+</body>
+</html>

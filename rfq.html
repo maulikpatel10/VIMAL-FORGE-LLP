@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Request a Technical RFQ | Global OEM Sourcing | Vimal Forge LLP</title>
+  <meta name="description"
+    content="Submit your engineering drawings and RFQ parameters directly to Vimal Forge LLP. Rapid technical review, prototyping, and quotation for custom B2B components.">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/motion.css">
+</head>
+
+<body>
+  <div id="page-content">
+
+    <!-- Header Section -->
+    <include src="components/header.html"></include>
+
+    <!-- Page Hero -->
+    <section class="hero" style="padding: 7rem 2rem 4rem 2rem;">
+      <div class="hero-container">
+        <div class="hero-content">
+          <span class="hero-tagline">Procurement Portal</span>
+          <h1 class="hero-title">Submit Request for Quotation (RFQ)</h1>
+          <p class="hero-subtitle">Upload your 2D PDF blueprints or 3D CAD models (STEP/IGS). Our engineering team
+            reviews specifications and responds within 48 business hours.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- RFQ Form Section -->
+    <section style="padding-bottom: 5rem;">
+      <div class="section-container">
+        <div
+          style="max-width: 800px; margin: 0 auto; background-color: var(--color-bg-light); padding: 3rem; border-radius: var(--border-radius-lg); box-shadow: var(--shadow-premium);">
+
+          <div id="rfq-success" class="rfq-success-message" style="display:none; text-align:center; padding: 2rem;">
+            <div style="font-size: 3.5rem; color: #2e7d32; margin-bottom: 1rem;">✓</div>
+            <h3>RFQ Submitted Successfully!</h3>
+            <p class="mt-1" style="color:var(--color-grey-dark);">Our Engineering Sourcing Director has received your
+              specifications and files. A technical confirmation has been sent to your business email. We will reach
+              back within 48 business hours.</p>
+          </div>
+
+          <form id="rfq-main-form" class="rfq-form">
+            <div class="grid-2">
+              <div class="form-group">
+                <label for="rfq-name">Your Full Name <span style="color:red;">*</span></label>
+                <input type="text" id="rfq-name" name="name" required placeholder="e.g. John Doe">
+              </div>
+              <div class="form-group">
+                <label for="rfq-company">Company Name <span style="color:red;">*</span></label>
+                <input type="text" id="rfq-company" name="company" required placeholder="e.g. Sourcing Corp">
+              </div>
+            </div>
+
+            <div class="grid-2">
+              <div class="form-group">
+                <label for="rfq-email">Work Email Address <span style="color:red;">*</span></label>
+                <input type="email" id="rfq-email" name="email" required placeholder="e.g. sourcing@company.com">
+              </div>
+              <div class="form-group">
+                <label for="rfq-phone">Contact Phone Number <span style="color:red;">*</span></label>
+                <input type="tel" id="rfq-phone" name="phone" required placeholder="e.g. +1 555-0199">
+              </div>
+            </div>
+
+
+            <div class="form-group">
+              <label for="rfq-quantity">Estimated Annual Volume (EAV) <span style="color:red;">*</span></label>
+              <select id="rfq-quantity" name="quantity" required>
+                <option value="">-- Select Quantity --</option>
+                <option value="Under 5,000">Under 5,000 pcs</option>
+                <option value="5,000 - 20,000">5,000 - 20,000 pcs</option>
+                <option value="20,000 - 100,000">20,000 - 100,000 pcs</option>
+                <option value="100,000+">100,000+ pcs</option>
+              </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+          <label>Upload Engineering Drawings / CAD Files <span style="color:red;">*</span></label>
+          <div class="drawing-upload-box" id="drawing-upload-zone">
+            <p>Drag & drop your 2D PDF drawings or 3D STEP/IGS files here</p>
+            <p style="font-size:0.8rem; color:var(--color-grey-dark); margin-top:0.5rem;">Or click to browse files (Max
+              size 25MB per file)</p>
+            <input type="file" id="rfq-file-input" name="drawings" multiple style="display:none;"
+              accept=".pdf,.step,.stp,.igs,.igt,.dwg,.dxf,.png,.jpg">
+          </div>
+          <!-- Uploaded Files List -->
+          <div id="file-list-display"
+            style="margin-top: 1rem; font-size: 0.9rem; color: var(--color-primary); font-weight:600; display:flex; flex-direction:column; gap:0.5rem;">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="rfq-notes">Additional Material & Machining Specs</label>
+          <textarea id="rfq-notes" name="notes" rows="4"
+            placeholder="e.g. Heat treatment parameters, grinding surface finish Ra, target price, delivery incoterms (FOB/CIF)..."></textarea>
+        </div>
+
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary" style="width:100%; font-size:1.1rem; padding: 1rem 2rem;">Submit
+            Technical RFQ</button>
+        </div>
+        </form>
+
+      </div>
+  </div>
+  </section>
+
+  <!-- Footer Section -->
+  <include src="components/footer.html"></include>
+  </div> <!-- end #page-content -->
+
+  <!-- Sticky Overlays -->
+  <div class="sticky-widgets-container">
+    <a href="https://wa.me/919979777787?text=Hi%20Vimal%20Forge,%20we%20have%20an%20RFQ%20inquiry."
+      class="floating-btn floating-whatsapp" target="_blank" rel="noopener noreferrer"
+      aria-label="Chat on WhatsApp">💬</a>
+    <a href="/rfq.html" class="floating-btn floating-rfq" aria-label="Request Quotation">RFQ</a>
+  </div>
+  <div class="mobile-call-bar">
+    <a href="tel:+919979777787">📞 Call Sourcing Manager (+91 99797 77787)</a>
+  </div>
+
+  <!-- Immersive Motion Design Engines -->
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script type="module" src="/js/motion.js"></script>
+  <script type="module" src="/js/main.js"></script>
+</body>
+
+</html>
