@@ -1,0 +1,503 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Vimal Forge LLP</title>
+<meta name="description" content="Vimal Forge LLP & Vimal Steel Forge – forged and machined components: ring rolling, closed-die forging, press forging and machining from Rajkot, Gujarat, India. Since 2009.">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#ffffff;--soft:#f4f5f3;--soft2:#eceeeb;--ink:#1f2523;--muted:#5d6763;--line:#dfe3e0;--orange:#f26b21;--orange2:#ff8a3d;--slate:#4b5650;--slate2:#39423d}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;line-height:1.65;overflow-x:hidden}
+h1,h2,h3,h4{font-family:"Barlow Condensed",sans-serif;text-transform:uppercase;line-height:1.05;letter-spacing:.01em}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.wrap{max-width:1240px;margin:0 auto;padding:0 20px}
+section{padding:110px 0;position:relative}
+.tag{display:inline-flex;align-items:center;gap:10px;color:var(--orange);font-weight:600;font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;margin-bottom:14px}
+.tag::before{content:"";width:28px;height:2px;background:var(--orange)}
+h2{font-size:clamp(2.2rem,4.6vw,3.6rem);margin-bottom:18px;font-weight:700}
+h2 em{font-style:normal;color:var(--orange)}
+.lead{color:var(--muted);max-width:640px;font-size:1.05rem}
+.head{display:flex;justify-content:space-between;align-items:end;gap:30px;flex-wrap:wrap;margin-bottom:50px}
+.btn{display:inline-flex;gap:10px;align-items:center;padding:15px 30px;font-weight:600;font-size:.95rem;transition:.3s;border-radius:2px;cursor:pointer;border:0}
+.btn-o{background:var(--orange);color:#fff;box-shadow:0 12px 28px -12px var(--orange)}
+.btn-o:hover{background:var(--slate);box-shadow:0 12px 28px -12px var(--slate);transform:translateY(-2px)}
+.btn-l{border:1.5px solid currentColor}
+.btn-l:hover{background:#fff;color:var(--ink)}
+
+/* nav */
+nav{position:fixed;inset:0 0 auto;z-index:60;transition:.35s}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:80px}
+nav.s{background:rgba(255,255,255,.92);backdrop-filter:blur(14px);box-shadow:0 4px 30px rgba(0,0,0,.06)}
+.logo{display:flex;align-items:center;gap:12px;font-family:"Barlow Condensed";font-weight:700;font-size:1.6rem;letter-spacing:.04em;color:#fff;transition:.35s}
+.logo small{display:block;font-size:.62rem;letter-spacing:.3em;font-weight:600;margin-top:-4px;opacity:.75}
+nav.s .logo{color:var(--slate)}
+.logo .v{width:40px;height:40px}
+.links{display:flex;gap:30px;font-size:.9rem;font-weight:500;color:rgba(255,255,255,.88)}
+nav.s .links{color:var(--muted)}
+.links a{position:relative;padding:4px 0}
+.links a::after{content:"";position:absolute;left:0;bottom:-2px;height:2px;width:0;background:var(--orange);transition:.3s}
+.links a:hover::after{width:100%}
+.nav-cta{padding:11px 22px;font-size:.85rem}
+.menu{display:none;background:none;border:0;font-size:1.7rem;color:#fff}
+nav.s .menu{color:var(--ink)}
+
+/* hero */
+.hero{min-height:100vh;display:flex;align-items:center;color:#fff;overflow:hidden;background:#141816}
+.hero-bg{position:absolute;inset:0}
+.hero-bg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.12);transition:opacity 1.6s,transform 7s linear}
+.hero-bg img.on{opacity:1;transform:scale(1)}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(20,24,22,.94) 0%,rgba(20,24,22,.72) 45%,rgba(20,24,22,.15) 100%)}
+.hero .wrap{position:relative;z-index:2;width:100%}
+.hero h1{font-size:clamp(3rem,7.5vw,6.4rem);font-weight:700;max-width:800px}
+.hero h1 .hl{color:var(--orange)}
+.hero h1 .ln{display:block;overflow:hidden}
+.hero h1 .ln i{display:block;font-style:normal;transform:translateY(105%);animation:up 1s cubic-bezier(.2,.8,.2,1) forwards}
+.hero h1 .ln:nth-child(2) i{animation-delay:.15s}
+@keyframes up{to{transform:none}}
+.hero p{max-width:560px;margin:26px 0 38px;color:rgba(255,255,255,.8);font-size:1.12rem;opacity:0;animation:fade 1s .5s forwards}
+.hero .cta{display:flex;gap:14px;flex-wrap:wrap;opacity:0;animation:fade 1s .7s forwards}
+@keyframes fade{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+.badges{position:absolute;bottom:0;right:0;z-index:3;display:flex;background:#fff;color:var(--ink)}
+.badges div{padding:24px 34px;border-left:1px solid var(--line)}
+.badges strong{font-family:"Barlow Condensed";font-size:2.2rem;color:var(--orange);display:block;line-height:1}
+.badges span{font-size:.78rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em}
+.dots{position:absolute;left:20px;bottom:40px;z-index:3;display:flex;gap:8px}
+.dots b{width:30px;height:3px;background:rgba(255,255,255,.3);cursor:pointer;transition:.3s}
+.dots b.on{background:var(--orange);width:50px}
+
+/* ticker */
+.ticker{background:var(--orange);color:#fff;overflow:hidden;padding:16px 0}
+.ticker div{display:flex;gap:50px;width:max-content;animation:tick 32s linear infinite;font-family:"Barlow Condensed";font-weight:600;font-size:1.35rem;text-transform:uppercase;letter-spacing:.05em}
+.ticker span::after{content:"◆";margin-left:50px;opacity:.6;font-size:.8rem;vertical-align:middle}
+@keyframes tick{to{transform:translateX(-50%)}}
+
+/* about */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.about-img{position:relative}
+.about-img img{width:100%;aspect-ratio:4/4.4;object-fit:cover}
+.about-img .small{position:absolute;width:48%;aspect-ratio:1;right:-30px;bottom:-40px;border:8px solid #fff;box-shadow:0 30px 60px -20px rgba(0,0,0,.3)}
+.about-img .yr{position:absolute;left:-20px;top:30px;background:var(--orange);color:#fff;padding:22px 26px;font-family:"Barlow Condensed";text-transform:uppercase;line-height:1;box-shadow:0 20px 40px -15px var(--orange)}
+.about-img .yr strong{font-size:3rem;display:block}
+.about p{color:var(--muted);margin-bottom:16px}
+.mvb{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px}
+.mvb div{background:var(--soft);padding:22px;border-top:3px solid var(--orange);transition:.35s}
+.mvb div:hover{background:var(--slate);color:#fff;transform:translateY(-4px)}
+.mvb div:hover p{color:rgba(255,255,255,.75)}
+.mvb h4{font-size:1.3rem;margin-bottom:6px}
+.mvb p{font-size:.85rem;margin:0}
+
+/* stats */
+.stats{background:var(--slate);color:#fff;padding:70px 0}
+.stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:30px}
+.stats div div{border-left:2px solid var(--orange);padding-left:22px}
+.stats strong{font-family:"Barlow Condensed";font-size:clamp(2.4rem,4vw,3.4rem);font-weight:700;display:block;line-height:1}
+.stats span{font-size:.85rem;color:rgba(255,255,255,.7)}
+
+/* video */
+.video{background:var(--soft)}
+.vbox{position:relative;aspect-ratio:16/9;overflow:hidden;box-shadow:0 50px 90px -40px rgba(31,37,35,.5);cursor:pointer;background:#000}
+.vbox img{width:100%;height:100%;object-fit:cover;transition:.8s;opacity:.85}
+.vbox:hover img{transform:scale(1.04);opacity:.7}
+.vbox iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.play{position:absolute;inset:0;margin:auto;width:96px;height:96px;border-radius:50%;background:var(--orange);display:grid;place-items:center;color:#fff;font-size:2rem;padding-left:6px}
+.play::before,.play::after{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid var(--orange);animation:pulse 2s infinite}
+.play::after{animation-delay:1s}
+@keyframes pulse{to{transform:scale(1.9);opacity:0}}
+
+/* process */
+.proc{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.pc{position:relative;overflow:hidden;background:#000;aspect-ratio:3/4;color:#fff}
+.pc img{width:100%;height:100%;object-fit:cover;transition:1s;opacity:.85}
+.pc:hover img{transform:scale(1.08);opacity:.55}
+.pc .txt{position:absolute;inset:auto 0 0;padding:24px;background:linear-gradient(transparent,rgba(0,0,0,.85))}
+.pc .n{font-family:"Barlow Condensed";font-size:1rem;color:var(--orange);font-weight:700;letter-spacing:.1em}
+.pc h3{font-size:1.6rem;margin:4px 0}
+.pc p{font-size:.86rem;color:rgba(255,255,255,.8);max-height:0;overflow:hidden;transition:.5s}
+.pc:hover p{max-height:120px}
+
+/* products */
+.products{background:var(--soft)}
+.filters{display:flex;flex-wrap:wrap;gap:10px}
+.filters button{background:#fff;border:1px solid var(--line);padding:10px 20px;font:500 .85rem Inter;cursor:pointer;transition:.25s;color:var(--muted)}
+.filters button.on,.filters button:hover{background:var(--orange);border-color:var(--orange);color:#fff}
+.pgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.pi{background:#fff;overflow:hidden;transition:.45s;position:relative}
+.pi.hide{display:none}
+.pi .im{aspect-ratio:4/3;overflow:hidden;background:#e5e7e8}
+.pi img{width:100%;height:112%;object-fit:cover;object-position:top;transition:.7s;mix-blend-mode:multiply}
+.pi:hover{transform:translateY(-6px);box-shadow:0 24px 40px -20px rgba(31,37,35,.35)}
+.pi:hover img{transform:scale(1.1) rotate(-3deg)}
+.pi h4{padding:14px 18px;font-size:1.15rem;display:flex;justify-content:space-between;align-items:center;border-top:3px solid var(--slate);transition:.3s}
+.pi:hover h4{border-color:var(--orange)}
+.pi h4::after{content:"→";color:var(--orange);transform:translateX(-8px);opacity:0;transition:.3s}
+.pi:hover h4::after{transform:none;opacity:1}
+.more{text-align:center;margin-top:40px}
+
+/* capability */
+.cap{display:grid;grid-template-columns:1.1fr 1fr;gap:60px}
+.ctable{width:100%;border-collapse:collapse}
+.ctable th{background:var(--slate);color:#fff;text-align:left;font:600 .78rem Inter;letter-spacing:.1em;text-transform:uppercase;padding:14px 16px}
+.ctable td{padding:16px;border-bottom:1px solid var(--line);font-size:.93rem}
+.ctable td:first-child{font-weight:600}
+.ctable tr{transition:.25s}
+.ctable tbody tr:hover{background:#fff4ec}
+.grades h4{font-size:1.1rem;color:var(--slate);margin:20px 0 10px}
+.grades h4:first-child{margin-top:0}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{background:var(--soft);padding:7px 14px;font-size:.82rem;color:var(--muted);transition:.25s}
+.chips span:hover{background:var(--orange);color:#fff}
+
+/* infra */
+.infra{background:var(--slate2);color:#fff}
+.infra .lead{color:rgba(255,255,255,.7)}
+.plants{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:24px}
+.plant{position:relative;overflow:hidden;aspect-ratio:16/9}
+.plant img{width:100%;height:100%;object-fit:cover;transition:1.2s}
+.plant:hover img{transform:scale(1.06)}
+.plant .ov{position:absolute;inset:auto 0 0;padding:28px;background:linear-gradient(transparent,rgba(0,0,0,.85))}
+.plant h3{font-size:1.9rem}
+.plant .nums{display:flex;gap:28px;margin-top:8px;flex-wrap:wrap}
+.plant .nums b{color:var(--orange2);font-family:"Barlow Condensed";font-size:1.6rem;display:block;line-height:1}
+.plant .nums span{font-size:.75rem;color:rgba(255,255,255,.75);text-transform:uppercase;letter-spacing:.08em}
+.gallery{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:170px;gap:12px}
+.gallery div{overflow:hidden;position:relative}
+.gallery div:nth-child(1),.gallery div:nth-child(6){grid-column:span 2;grid-row:span 2}
+.gallery img{width:100%;height:100%;object-fit:cover;transition:.8s;filter:grayscale(.3)}
+.gallery div:hover img{transform:scale(1.08);filter:none}
+.gallery span{position:absolute;left:12px;bottom:10px;font:600 .72rem Inter;letter-spacing:.12em;text-transform:uppercase;background:var(--orange);padding:4px 10px;transform:translateY(40px);transition:.4s}
+.gallery div:hover span{transform:none}
+
+/* industries */
+.ind{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.ind div{border:1px solid var(--line);padding:28px 22px;transition:.35s;position:relative;overflow:hidden}
+.ind div::before{content:"";position:absolute;inset:0;background:var(--orange);transform:translateY(101%);transition:.4s cubic-bezier(.2,.8,.2,1);z-index:-1}
+.ind div:hover{color:#fff;border-color:var(--orange)}
+.ind div:hover::before{transform:none}
+.ind div:hover svg{stroke:#fff}
+.ind svg{width:40px;height:40px;stroke:var(--orange);fill:none;stroke-width:1.6;margin-bottom:16px;transition:.3s}
+.ind h3{font-size:1.2rem}
+
+/* quality */
+.quality{background:var(--soft)}
+.qwrap{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.qimg{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.qimg img{width:100%;aspect-ratio:1;object-fit:cover}
+.qimg img:nth-child(2){margin-top:40px}
+.qlist{display:grid;gap:14px;margin-top:26px}
+.q{display:flex;gap:18px;background:#fff;padding:20px 22px;transition:.3s;border-left:3px solid transparent}
+.q:hover{border-color:var(--orange);transform:translateX(6px)}
+.q b{font-family:"Barlow Condensed";font-size:1.6rem;color:var(--orange);line-height:1}
+.q h4{font-size:1.15rem;margin-bottom:2px}
+.q p{font-size:.88rem;color:var(--muted)}
+
+/* future */
+.future{background:linear-gradient(120deg,var(--orange),#e0520f);color:#fff;padding:80px 0;overflow:hidden}
+.future .wrap{display:grid;grid-template-columns:1fr 1.4fr;gap:50px;align-items:center}
+.future h2{color:#fff}
+.fl{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.fl div{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);padding:22px;backdrop-filter:blur(4px);transition:.3s}
+.fl div:hover{background:#fff;color:var(--ink)}
+.fl strong{font-family:"Barlow Condensed";font-size:2.2rem;display:block;line-height:1}
+.fl span{font-size:.88rem;opacity:.9}
+
+/* contact */
+.contact{display:grid;grid-template-columns:1fr 1.2fr;box-shadow:0 40px 80px -40px rgba(31,37,35,.35)}
+.cinfo{background:var(--slate);color:#fff;padding:50px}
+.cinfo .it{display:flex;gap:16px;margin-top:28px}
+.cinfo .ic{width:44px;height:44px;flex:none;background:var(--orange);display:grid;place-items:center;font-size:1.1rem}
+.cinfo small{display:block;color:var(--orange2);font-weight:600;font-size:.72rem;letter-spacing:.15em;text-transform:uppercase}
+.cinfo p{color:rgba(255,255,255,.82);font-size:.93rem}
+form{padding:50px;display:grid;grid-template-columns:1fr 1fr;gap:16px;background:#fff}
+form .full{grid-column:1/-1}
+input,select,textarea{border:1px solid var(--line);background:var(--soft);padding:15px;font:inherit;font-size:.93rem;color:var(--ink);transition:.25s}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--orange);background:#fff}
+footer{background:#161a18;color:rgba(255,255,255,.6);padding:50px 0 30px;font-size:.88rem}
+footer .top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:30px;padding-bottom:30px;border-bottom:1px solid rgba(255,255,255,.1);margin-bottom:24px}
+footer .logo{color:#fff}
+footer .fl2{display:flex;gap:24px;flex-wrap:wrap}
+footer a:hover{color:var(--orange)}
+.totop{position:fixed;right:20px;bottom:20px;width:48px;height:48px;background:var(--orange);color:#fff;display:grid;place-items:center;z-index:50;opacity:0;transform:translateY(20px);transition:.3s;font-size:1.2rem}
+.totop.on{opacity:1;transform:none}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(46px);transition:opacity .9s,transform .9s cubic-bezier(.2,.8,.2,1)}
+.rv.l{transform:translateX(-60px)}.rv.r{transform:translateX(60px)}.rv.z{transform:scale(.9)}
+.rv.in{opacity:1;transform:none}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
+
+@media(max-width:1000px){
+ .links{display:none;position:absolute;top:80px;left:0;right:0;flex-direction:column;background:#fff;color:var(--ink)!important;padding:24px 20px;gap:18px;box-shadow:0 20px 30px rgba(0,0,0,.08)}
+ .links.open{display:flex}.menu{display:block}.nav-cta{display:none}
+ .about,.cap,.qwrap,.future .wrap,.contact{grid-template-columns:1fr}
+ .proc,.pgrid{grid-template-columns:1fr 1fr}
+ .stats .wrap{grid-template-columns:1fr 1fr}
+ .ind{grid-template-columns:repeat(3,1fr)}
+ .plants{grid-template-columns:1fr}
+ .gallery{grid-template-columns:repeat(3,1fr)}
+ .about-img .small{right:10px}
+ section{padding:80px 0}
+}
+@media(max-width:640px){
+ .badges{position:relative;flex-wrap:wrap;margin-top:40px}
+ .badges div{flex:1 1 33%;padding:16px}
+ .hero{flex-direction:column;justify-content:flex-end;padding-top:120px}
+ .dots{display:none}
+ .mvb,.fl,form{grid-template-columns:1fr}
+ .ind{grid-template-columns:1fr 1fr}
+ .gallery{grid-template-columns:1fr 1fr;grid-auto-rows:130px}
+ .cinfo,form{padding:30px 22px}
+ .about-img .yr{left:0}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv,.hero p,.hero .cta{opacity:1;transform:none}.hero h1 .ln i{transform:none}}
+</style>
+</head>
+<body>
+
+<nav id="nav"><div class="wrap">
+ <a href="#top" class="logo"><svg class="v" viewBox="0 0 40 40"><path d="M3 6h11l6 16 6-16h11L24 36h-8z" fill="#f26b21"/><path d="M14 6l6 16 6-16" fill="none" stroke="#fff" stroke-width="2" opacity=".7"/></svg><div>VIMAL FORGE<small>LLP · VIMAL STEEL FORGE</small></div></a>
+ <div class="links" id="links"><a href="#about">About</a><a href="#process">Process</a><a href="#products">Products</a><a href="#capability">Capability</a><a href="#infrastructure">Infrastructure</a><a href="#quality">Quality</a><a href="#contact">Contact</a></div>
+ <a href="#contact" class="btn btn-o nav-cta">Get a Quote</a>
+ <button class="menu" id="menu" aria-label="Menu">☰</button>
+</div></nav>
+
+<header class="hero" id="top">
+ <div class="hero-bg" id="hbg">
+  <img src="assets/photos/86.jpg" alt="" class="on"><img src="assets/photos/90.jpg" alt=""><img src="assets/photos/96.jpg" alt=""><img src="assets/photos/327.jpg" alt="">
+ </div>
+ <div class="wrap">
+  <span class="tag">Forged &amp; Machined Components</span>
+  <h1><span class="ln"><i>Where <b class="hl" style="font-weight:inherit">strength</b></i></span><span class="ln"><i>meets precision.</i></span></h1>
+  <p>Ring rolling, closed-die and press forging, heat treatment and machining from our Rajkot plants, built to your drawing for OEMs in India and overseas.</p>
+  <div class="cta"><a href="#contact" class="btn btn-o">Request a Quote →</a><a href="#video" class="btn btn-l">▶ Watch Corporate Film</a></div>
+ </div>
+ <div class="dots" id="dots"><b class="on"></b><b></b><b></b><b></b></div>
+ <div class="badges"><div><strong>2009</strong><span>Serving since</span></div><div><strong>ISO</strong><span>9001:2015</span></div><div><strong>50+</strong><span>Forged parts</span></div></div>
+</header>
+
+<div class="ticker"><div id="tick"><span>Ring Rolling</span><span>Closed-Die Forging</span><span>Press Forging &amp; Upset</span><span>In-house Die Shop</span><span>Heat Treatment</span><span>Shot Blasting</span><span>VMC Machining</span><span>MPI Crack Detection</span></div></div>
+
+<section id="about"><div class="wrap about">
+ <div class="about-img rv l">
+  <img src="assets/photos/337.jpg" alt="Forging shop floor">
+  <img class="small" src="assets/photos/100.jpg" alt="Hot forged rings">
+  <div class="yr"><strong>15+</strong>Years of<br>forging</div>
+ </div>
+ <div class="rv r">
+  <span class="tag">About company</span>
+  <h2>Built on solid goals,<br><em>beliefs &amp; values</em></h2>
+  <p>Vimal Forge LLP, with roots in Vimal Steel Forge, has one goal: to be a trusted global supplier of forgings. We control every step ourselves, from buying raw material through forging and heat treatment to delivering on time.</p>
+  <p>Our facilities, skilled workforce and in-house metallurgy let us deliver complete forged and machined components to your exact specification.</p>
+  <div class="mvb">
+   <div><h4>Mission</h4><p>Global recognition as a responsible corporate, built on service and ethics.</p></div>
+   <div><h4>Vision</h4><p>A trusted source for world-class forged &amp; machined components.</p></div>
+   <div><h4>Belief</h4><p>Quality never happens by accident. It comes from systematic effort.</p></div>
+  </div>
+ </div>
+</div></section>
+
+<div class="stats"><div class="wrap">
+ <div class="rv"><div><strong data-n="107600">0</strong><span>Sq.ft total land area</span></div></div>
+ <div class="rv d1"><div><strong data-n="41000">0</strong><span>Sq.ft production area</span></div></div>
+ <div class="rv d2"><div><strong data-n="400" data-s=" mm">0</strong><span>Max ring rolling OD</span></div></div>
+ <div class="rv d3"><div><strong data-n="20" data-s=" kg">0</strong><span>Closed-die forging weight</span></div></div>
+</div></div>
+
+<section class="video" id="video"><div class="wrap">
+ <div class="head"><div><span class="tag rv">Corporate film</span><h2 class="rv d1">See our <em>forge</em> in action</h2></div><p class="lead rv d2">Take a walk through our plants, from billet heating and ring rolling to inspection and dispatch.</p></div>
+ <div class="vbox rv z" id="vbox"><img src="assets/photos/73.jpg" alt="Vimal Forge factory"><div class="play">▶</div></div>
+</div></section>
+
+<section id="process"><div class="wrap">
+ <div class="head"><div><span class="tag rv">Our process</span><h2 class="rv d1">From billet to <em>finished part</em></h2></div><p class="lead rv d2">Every stage is controlled in-house, so each component meets your drawing.</p></div>
+ <div class="proc">
+  <div class="pc rv"><img src="assets/photos/78.jpg" alt=""><div class="txt"><span class="n">01</span><h3>Raw Material</h3><p>Bars from approved mills (ISMT, JSW, Gerdau). Chemical, UT &amp; colour-code identification.</p></div></div>
+  <div class="pc rv d1"><img src="assets/photos/80.jpg" alt=""><div class="txt"><span class="n">02</span><h3>Die Making</h3><p>In-house die shop with VMC. DIN-2714 / H11 / H13 dies, layout inspected on Plaster of Paris.</p></div></div>
+  <div class="pc rv d2"><img src="assets/photos/82.jpg" alt=""><div class="txt"><span class="n">03</span><h3>Blank Cutting</h3><p>Circular saws with auto loader, band saws and hot shearing on long bars.</p></div></div>
+  <div class="pc rv d3"><img src="assets/photos/90.jpg" alt=""><div class="txt"><span class="n">04</span><h3>Heating</h3><p>Induction billet heaters with temperature accept/reject, plus an oil-fired furnace.</p></div></div>
+  <div class="pc rv"><img src="assets/photos/94.jpg" alt=""><div class="txt"><span class="n">05</span><h3>Forging</h3><p>Drawing down, upsetting, piercing, cup forming and ring rolling in one heat cycle.</p></div></div>
+  <div class="pc rv d1"><img src="assets/photos/102.jpg" alt=""><div class="txt"><span class="n">06</span><h3>Heat Treatment</h3><p>Bell-type normalizing &amp; spheroidized annealing with live i-Tool cycle tracking.</p></div></div>
+  <div class="pc rv d2"><img src="assets/photos/104.jpg" alt=""><div class="txt"><span class="n">07</span><h3>Shot Blasting</h3><p>Tumbler-type descaling with 0.45 / 0.55 mm shot and 100% fettling.</p></div></div>
+  <div class="pc rv d3"><img src="assets/photos/106.jpg" alt=""><div class="txt"><span class="n">08</span><h3>Inspection</h3><p>Visual, Brinell hardness, MPI crack detection and pre-dispatch inspection reports.</p></div></div>
+ </div>
+</div></section>
+
+<section class="products" id="products"><div class="wrap">
+ <div class="head"><div><span class="tag rv">Products</span><h2 class="rv d1">Our <em>forged</em> portfolio</h2></div>
+  <div class="filters rv d2" id="filters"><button class="on" data-f="all">All</button><button data-f="ring">Rings &amp; Bearings</button><button data-f="auto">Automotive</button><button data-f="trans">Transmission</button><button data-f="ind">Industrial</button></div></div>
+ <div class="pgrid" id="pgrid"></div>
+ <div class="more"><button class="btn btn-o" id="more">View All Products ↓</button></div>
+</div></section>
+
+<section id="capability"><div class="wrap">
+ <div class="head"><div><span class="tag rv">Technical details</span><h2 class="rv d1">Capacity &amp; <em>capability</em></h2></div><p class="lead rv d2">We forge ferrous, non-ferrous and stainless steel to customer specifications and to SAE, IS, DIN, JIS and BS standards.</p></div>
+ <div class="cap">
+  <div class="rv l" style="overflow-x:auto">
+   <table class="ctable">
+    <thead><tr><th>Process</th><th>Equipment</th><th>Size</th><th>Weight</th></tr></thead>
+    <tbody>
+     <tr><td>Closed-die forging</td><td>1.5 MT Belt Drop Hammer + 350 KVA induction</td><td>650 × 350 × 250 mm</td><td>0.5 – 20 kg</td></tr>
+     <tr><td>Press forging &amp; upset</td><td>500 MT Screw Press + 250 KVA induction</td><td>150 × 150 × 80 mm</td><td>0.1 – 2 kg</td></tr>
+     <tr><td>Ring rolling</td><td>300 MT Power Press + 250 KVA induction</td><td>Ø 50 – 250 mm</td><td>0.2 – 4.5 kg</td></tr>
+     <tr><td>Ring rolling</td><td>400 MT Power Press + oil-fired furnace</td><td>Ø 50 – 400 mm</td><td>0.5 – 15 kg</td></tr>
+     <tr><td>VMC machining</td><td>2 HAAS VMCs</td><td>1020 × 600 × 400 mm</td><td>—</td></tr>
+     <tr><td>Magnetic particle</td><td>MPI with auto de-magnetising</td><td>up to 400 mm</td><td>—</td></tr>
+     <tr><td>Annealing</td><td>3 bell-type furnaces</td><td colspan="2">3 MT capacity</td></tr>
+    </tbody>
+   </table>
+  </div>
+  <div class="grades rv r">
+   <h4>Low carbon steel</h4><div class="chips"><span>SAE 1008</span><span>SAE 1010</span><span>SAE 1018</span><span>SAE 1020</span><span>EN1A</span></div>
+   <h4>Medium carbon steel</h4><div class="chips"><span>EN8D</span><span>EN9</span><span>C45</span><span>SAE 1040</span><span>SAE 1045</span><span>SAE 1141</span></div>
+   <h4>High carbon steel</h4><div class="chips"><span>SAE 52100</span><span>EN19</span></div>
+   <h4>Alloy steel</h4><div class="chips"><span>16MnCr5</span><span>20MnCr5</span><span>SAE 8620</span><span>SAE 4140</span><span>EN353</span></div>
+   <h4>Stainless steel</h4><div class="chips"><span>SS304</span><span>SS316L</span><span>SS410</span></div>
+  </div>
+ </div>
+</div></section>
+
+<section class="infra" id="infrastructure"><div class="wrap">
+ <div class="head"><div><span class="tag rv">Infrastructure</span><h2 class="rv d1">Room to <em>grow</em></h2></div><p class="lead rv d2">Two manufacturing units in the Rajkot industrial belt of Gujarat.</p></div>
+ <div class="plants">
+  <div class="plant rv l"><img src="assets/photos/305.jpg" alt="Vimal Forge LLP plant"><div class="ov"><h3>Vimal Forge LLP</h3><div class="nums"><div><b>1,07,600</b><span>Sq.ft total area</span></div><div><b>33,000</b><span>Sq.ft production</span></div><div><b>8,000</b><span>Sq.ft RM storage</span></div></div></div></div>
+  <div class="plant rv r"><img src="assets/photos/316.jpg" alt="Vimal Steel Forge plant"><div class="ov"><h3>Vimal Steel Forge</h3><div class="nums"><div><b>12,000</b><span>Sq.ft total area</span></div><div><b>8,000</b><span>Sq.ft production</span></div><div><b>1,000</b><span>Sq.ft RM storage</span></div></div></div></div>
+ </div>
+ <div class="gallery">
+  <div class="rv"><img src="assets/photos/329.jpg" alt=""><span>Forging line</span></div>
+  <div class="rv d1"><img src="assets/photos/322.jpg" alt=""><span>Die shop</span></div>
+  <div class="rv d2"><img src="assets/photos/334.jpg" alt=""><span>Annealing</span></div>
+  <div class="rv d1"><img src="assets/photos/348.jpg" alt=""><span>Raw material</span></div>
+  <div class="rv d2"><img src="assets/photos/360.jpg" alt=""><span>Press</span></div>
+  <div class="rv"><img src="assets/photos/383.jpg" alt=""><span>VMC machining</span></div>
+  <div class="rv d1"><img src="assets/photos/366.jpg" alt=""><span>Radial drill</span></div>
+  <div class="rv d2"><img src="assets/photos/376.jpg" alt=""><span>Finished rings</span></div>
+  <div class="rv d3"><img src="assets/photos/310.jpg" alt=""><span>Aerial view</span></div>
+  <div class="rv d1"><img src="assets/photos/381.jpg" alt=""><span>Laser marking</span></div>
+ </div>
+</div></section>
+
+<section id="industries"><div class="wrap">
+ <div class="head"><div><span class="tag rv">Industries we serve</span><h2 class="rv d1">Powering <em>critical</em> sectors</h2></div></div>
+ <div class="ind" id="ind"></div>
+</div></section>
+
+<section class="quality" id="quality"><div class="wrap qwrap">
+ <div class="qimg rv l"><img src="assets/photos/342.jpg" alt="Spectrometer"><img src="assets/photos/379.jpg" alt="Metallurgical microscope"></div>
+ <div class="rv r">
+  <span class="tag">Quality is our top priority</span>
+  <h2>The next inspector<br>is <em>the customer</em></h2>
+  <div class="qlist">
+   <div class="q"><b>01</b><div><h4>In-house raw material testing</h4><p>Spectrometer analysis (GNR Italy) and micro-cleanliness checks, plus an NABL-approved lab.</p></div></div>
+   <div class="q"><b>02</b><div><h4>Metallurgy laboratory</h4><p>1000X microscope with image analyser, hardness tester, cutting &amp; polishing.</p></div></div>
+   <div class="q"><b>03</b><div><h4>Hardness &amp; crack detection</h4><p>Brinell 3000 kg / 10 mm. MPI on all functionally critical forgings.</p></div></div>
+   <div class="q"><b>04</b><div><h4>Pre-dispatch inspection</h4><p>Visual and dimensional checks with PDI reports sent with every material dispatch.</p></div></div>
+  </div>
+ </div>
+</div></section>
+
+<div class="future"><div class="wrap">
+ <div class="rv l"><span class="tag" style="color:#fff">Future plan</span><h2>Scaling up<br>the forge</h2></div>
+ <div class="fl rv r">
+  <div><strong>50 kg</strong><span>Closed-die forging, single piece</span></div>
+  <div><strong>1000 mm</strong><span>Ring rolling capacity</span></div>
+  <div><strong>Q &amp; T</strong><span>In-house quench &amp; tempering</span></div>
+  <div><strong>CNC · VTL</strong><span>In-house turn-mill machining</span></div>
+ </div>
+</div></div>
+
+<section id="contact"><div class="wrap">
+ <div class="head"><div><span class="tag rv">Contact us</span><h2 class="rv d1">Send your drawing.<br><em>Get a quote.</em></h2></div></div>
+ <div class="contact rv z">
+  <div class="cinfo">
+   <h3 style="font-size:1.8rem">Let's build together</h3>
+   <div class="it"><div class="ic">☎</div><div><small>Phone</small><p><a href="tel:+919979777787">+91 99797 77787</a></p></div></div>
+   <div class="it"><div class="ic">✉</div><div><small>Email</small><p><a href="mailto:info@vimalsteelforge.com">info@vimalsteelforge.com</a></p></div></div>
+   <div class="it"><div class="ic">⌂</div><div><small>Vimal Forge LLP</small><p>Survey No. 79/1, Near Bharudi Toll Plaza, NH-27, At. Pipadiya, Ta. Gondal, Dist. Rajkot – 360311</p></div></div>
+   <div class="it"><div class="ic">⌂</div><div><small>Vimal Steel Forge</small><p>Jai Industrial Estate, Plot No. 3/B, Survey No. 237, B/h Vikas Stove, Veraval (Shapar), Dist. Rajkot</p></div></div>
+  </div>
+  <form id="form">
+   <input required placeholder="Full name"><input required type="email" placeholder="Email address">
+   <input placeholder="Company"><input placeholder="Country / City">
+   <select class="full"><option>Ring-rolled components</option><option>Closed-die forgings</option><option>Press / upset forgings</option><option>Machined components</option><option>Other</option></select>
+   <textarea class="full" rows="5" placeholder="Part name, material grade, dimensions, annual quantity…"></textarea>
+   <button class="btn btn-o full" style="justify-content:center">Send Enquiry →</button>
+  </form>
+ </div>
+</div></section>
+
+<footer><div class="wrap">
+ <div class="top">
+  <a href="#top" class="logo"><svg class="v" viewBox="0 0 40 40"><path d="M3 6h11l6 16 6-16h11L24 36h-8z" fill="#f26b21"/></svg><div>VIMAL FORGE<small>LLP · VIMAL STEEL FORGE</small></div></a>
+  <div class="fl2"><a href="#about">About</a><a href="#products">Products</a><a href="#capability">Capability</a><a href="#infrastructure">Infrastructure</a><a href="#contact">Contact</a></div>
+ </div>
+ <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px"><span>© <span id="yr"></span> Vimal Forge LLP. All rights reserved.</span><span>Giving expert services since 2009</span></div>
+</div></footer>
+<a href="#top" class="totop" id="totop">↑</a>
+
+<script>
+const $=s=>document.querySelector(s),$$=s=>document.querySelectorAll(s);
+const nav=$('#nav'),tt=$('#totop');
+addEventListener('scroll',()=>{nav.classList.toggle('s',scrollY>60);tt.classList.toggle('on',scrollY>700)},{passive:true});
+$('#menu').onclick=()=>$('#links').classList.toggle('open');
+$$('.links a').forEach(a=>a.onclick=()=>$('#links').classList.remove('open'));
+$('#yr').textContent=new Date().getFullYear();
+const tk=$('#tick');tk.innerHTML+=tk.innerHTML;
+
+// hero slideshow
+const hs=$$('#hbg img'),hd=$$('#dots b');let hi=0;
+const show=i=>{hs[hi].classList.remove('on');hd[hi].classList.remove('on');hi=i;hs[hi].classList.add('on');hd[hi].classList.add('on')};
+let ht=setInterval(()=>show((hi+1)%hs.length),5500);
+hd.forEach((d,i)=>d.onclick=()=>{clearInterval(ht);show(i);ht=setInterval(()=>show((hi+1)%hs.length),5500)});
+
+// products
+const P=[['forged-rings','Customised Forged Ring','ring'],['bearing-races','Bearing Races','ring'],['ring-gear','Ring Gear','trans'],['gear-blank','Gear Blank','trans'],
+['hardened-bushes','Hardened Steel Bushes','ring'],['groove-ring','Groove Ring','ring'],['flange','Flange','ind'],['crank-shaft','Crank Shaft','auto'],
+['yoke','Yoke','trans'],['sleeve-yoke','Sleeve Yoke','trans'],['steering-knuckle','Steering Knuckle','auto'],['connecting-rod','Connecting Rod','auto'],
+['lock-nut','Lock Nut','ring'],['hub','Hub','auto'],['flange-bush','Flange Bush','ind'],['king-pin','King Pin','auto'],
+['anchor-shackle','Anchor Shackle','ind'],['ball-joint','Ball Joint','auto'],['tee','Tee','ind'],['elbow','Elbow','ind'],
+['torque-rod-arm','Torque Rod Arm','auto'],['steering-arm','Steering Arm','auto'],['transmission-part','Transmission Part','trans'],['shaft','Shaft','trans'],
+['sleeve-coupling','Sleeve Coupling','trans'],['slotted-bush','Slotted Bush','ring'],['oil-seal-clip','Oil Seal Clip','ind'],['outer-blank','Outer Blank','ring'],
+['piston-rod','Piston Rod','ind'],['rod-eye','Rod Eye','ind'],['roller','Roller','ind'],['nut','Nut','ind'],
+['cover','Cover','ind'],['cap','Cap','ind'],['cap-end-cover','Cap End Cover','ind'],['bonnet','Bonnet','ind'],
+['gland','Gland','ind'],['chain-link','Chain Link','ind'],['clevis-eye','Clevis Eye','ind'],['pole-line-parts','Pole Line Parts','ind'],
+['press-components','Press Components','ind'],['press-forge','Press Forge','ind'],['steel-clamp','Steel Clamp','ind'],['torque-arm','Torque Arm','auto'],
+['upset-forging','Upset Forging','ind'],['web','Web','ind'],['automotive','Automotive Part','auto'],['flange-2','Flange Type II','ind']];
+const g=$('#pgrid');let filt='all',all=false;
+g.innerHTML=P.map(([f,n,c])=>`<div class="pi" data-c="${c}"><div class="im"><img loading="lazy" src="assets/products/${f}.jpg" alt="${n}"></div><h4>${n}</h4></div>`).join('');
+function render(){let k=0;$$('.pi').forEach(el=>{const ok=filt=='all'||el.dataset.c==filt;const vis=ok&&(all||filt!='all'||k<12);if(ok)k++;el.classList.toggle('hide',!vis);if(vis){el.style.animation='none';el.offsetHeight;el.style.animation='fade .6s both'}});$('#more').style.display=filt=='all'&&!all?'':'none'}
+$$('#filters button').forEach(b=>b.onclick=()=>{$$('#filters button').forEach(x=>x.classList.remove('on'));b.classList.add('on');filt=b.dataset.f;render()});
+$('#more').onclick=()=>{all=true;render()};render();
+
+// industries
+const ic={b:'<circle cx="20" cy="20" r="15"/><circle cx="20" cy="20" r="7"/><circle cx="20" cy="9" r="2"/><circle cx="31" cy="20" r="2"/><circle cx="20" cy="31" r="2"/><circle cx="9" cy="20" r="2"/>',
+a:'<path d="M5 26h30v-6l-5-8H12l-5 8z"/><circle cx="12" cy="27" r="4"/><circle cx="28" cy="27" r="4"/>',
+e:'<path d="M4 30h20v-8H10z"/><path d="M24 22l8-12 4 4-6 10"/><circle cx="9" cy="32" r="3"/><circle cx="19" cy="32" r="3"/>',
+m:'<path d="M8 34l14-14M20 8c6 0 10 4 12 10-6-2-10-2-14 2z"/>',
+g:'<circle cx="20" cy="20" r="6"/><path d="M20 4v6M20 30v6M4 20h6M30 20h6M9 9l4 4M27 27l4 4M31 9l-4 4M13 27l-4 4"/>',
+o:'<path d="M20 4c6 9 10 14 10 20a10 10 0 01-20 0c0-6 4-11 10-20z"/>',
+p:'<path d="M20 4v32M10 10h20M8 18h24M14 10l-6 8M26 10l6 8"/>',
+h:'<rect x="8" y="12" width="24" height="16" rx="2"/><path d="M14 12V6h12v6M20 28v8"/>',
+r:'<rect x="9" y="5" width="22" height="22" rx="4"/><path d="M9 18h22M13 35l4-8M27 35l-4-8"/><circle cx="15" cy="22" r="1.5"/><circle cx="25" cy="22" r="1.5"/>',
+f:'<path d="M20 36V14M20 22c-6 0-10-4-10-10 6 0 10 4 10 10zM20 18c0-6 4-10 10-10 0 6-4 10-10 10z"/>'};
+$('#ind').innerHTML=[['b','Bearing'],['a','Automotive'],['e','Earth Moving'],['h','Construction Equipment'],['m','Infrastructure & Mining'],['f','Agriculture'],['o','Oil & Gas'],['p','Pole-line Transmission'],['g','Gear Transmission'],['r','Railways']]
+ .map(([k,n],i)=>`<div class="rv d${i%4}"><svg viewBox="0 0 40 40">${ic[k]}</svg><h3>${n}</h3></div>`).join('');
+
+// video
+$('#vbox').onclick=function(){this.innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/TgZ5iCxFOb0?autoplay=1&rel=0" title="Vimal Forge corporate video" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>';this.onclick=null};
+
+// form
+$('#form').onsubmit=e=>{e.preventDefault();e.target.innerHTML='<div class="full" style="padding:40px 0"><h3 style="font-size:2rem;color:var(--orange)">Thank you!</h3><p style="color:var(--muted)">Our team will get back to you within 24 hours.</p></div>'};
+
+// reveal + counters
+const fmt=n=>n.toLocaleString('en-IN');
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;const el=e.target;el.classList.add('in');
+ el.querySelectorAll('[data-n]').forEach(n=>{const end=+n.dataset.n,s=n.dataset.s||'',t0=performance.now();
+  (function f(t){const p=Math.min((t-t0)/1800,1);n.textContent=fmt(Math.round(end*(1-Math.pow(1-p,3))))+s;if(p<1)requestAnimationFrame(f)})(t0)});
+ io.unobserve(el)}),{threshold:.12});
+$$('.rv').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
